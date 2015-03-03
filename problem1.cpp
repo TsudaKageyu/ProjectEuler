@@ -21,6 +21,6 @@ namespace problem1
 {
     void calc()
     {
-        std::cout << "Answer1: " << f2<3, 999>() + f2<5, 999>() - f2<15, 999>() << std::endl;
+        std::cout << "Answer1: " << f2<3, 999>() + f2<5, 999>() - f2<15, 999>() << " (Constant Time)" << std::endl;
     }
 }
