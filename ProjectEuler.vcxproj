@@ -81,11 +81,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="problem1.cpp" />
     <ClCompile Include="problem2.cpp" />
+    <ClCompile Include="problem3.cpp" />
     <ClCompile Include="problem4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="problem1.h" />
     <ClInclude Include="problem2.h" />
+    <ClInclude Include="problem3.h" />
     <ClInclude Include="problem4.h" />
     <ClInclude Include="stopwatch.h" />
   </ItemGroup>
