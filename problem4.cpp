@@ -25,8 +25,8 @@ namespace
         return (n / power<10, D>::value) % 10;
     }
 
-    // Checks if the number of parindrome like "123321".
-    bool is_parindrome(int n)
+    // Checks if the number is palindromic like "123321".
+    bool is_palindromic(int n)
     {
         assert(100 * 100 <= n && n <= 999 * 999);
 
@@ -49,7 +49,7 @@ namespace problem4
             for (int j = i; j <= 999; ++j)
             {
                 const int p = i * j;
-                if (p > answer && is_parindrome(p))
+                if (p > answer && is_palindromic(p))
                     answer = p;
             }
         }
