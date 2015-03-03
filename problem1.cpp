@@ -2,7 +2,7 @@
 
 namespace
 {
-    // Returns the sum of all the natural number no more than N.
+    // Returns the sum of all the natural numbers no more than N.
     template <int N>
     int f1()
     {

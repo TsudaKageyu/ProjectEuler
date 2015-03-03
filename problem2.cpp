@@ -3,10 +3,6 @@
 #include "problem2.h"
 #include "stopwatch.h"
 
-namespace
-{
-}
-
 namespace problem2
 {
     void calc()
