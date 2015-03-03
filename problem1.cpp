@@ -1,5 +1,4 @@
 #include <iostream>
-#include "problem1.h"
 
 namespace
 {
