@@ -54,7 +54,7 @@ namespace problem4
             }
         }
 
-        const double epalsed = sw.GetElapsedMilliseconds();
-        std::cout << "Answer4: " << answer << " (" << epalsed << " ms)" << std::endl;
+        const double elapsed = sw.GetElapsedMilliseconds();
+        std::cout << "Answer4: " << answer << " (" << elapsed << " ms)" << std::endl;
     }
 }

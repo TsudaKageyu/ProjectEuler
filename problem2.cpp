@@ -22,7 +22,7 @@ namespace problem2
             buf[1] = next;
         } while (buf[1] <= 4000000);
 
-        const double epalsed = sw.GetElapsedMilliseconds();
-        std::cout << "Answer2: " << answer << " (" << epalsed << " ms)" << std::endl;
+        const double elapsed = sw.GetElapsedMilliseconds();
+        std::cout << "Answer2: " << answer << " (" << elapsed << " ms)" << std::endl;
     }
 }
