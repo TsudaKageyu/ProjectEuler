@@ -2,5 +2,5 @@
 
 namespace problem4
 {
-    void calc();
+    void Solve();
 }

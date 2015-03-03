@@ -6,11 +6,11 @@
 
 int main()
 {
-    problem1::calc();
-    problem2::calc();
-    problem3::calc();
-    problem4::calc();
-    problem5::calc();
+    problem1::Solve();
+    problem2::Solve();
+    problem3::Solve();
+    problem4::Solve();
+    problem5::solve();
 
     return 0;
 }

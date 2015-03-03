@@ -1,23 +1,17 @@
-#include <cassert>
-#include <climits>
-#include <algorithm>
-#include <iostream>
-#include <vector>
-
+#include "common.h"
 #include "problem3.h"
-#include "stopwatch.h"
 
 namespace problem3
 {
-    void calc()
+    void Solve()
     {
         StopWatch sw;
 
-        const long long num = 600851475143;
+        const int64_t num = 600851475143;
 
         // List the prime numbers no more than sqrt(num).
 
-        const long long max_prime = static_cast<long long>(std::sqrt(num));
+        const int64_t max_prime = static_cast<int64_t>(std::sqrt(num));
         assert(max_prime <= INT_MAX);
 
         std::vector<int> primes;
@@ -45,7 +39,7 @@ namespace problem3
 
         for (auto it = it2; it >= it1; --it)
         {
-            const auto d = std::div(num, static_cast<long long>(*it));
+            const auto d = std::div(num, static_cast<int64_t>(*it));
             if (d.rem == 0) {
                 answer = *it;
                 break;

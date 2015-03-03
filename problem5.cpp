@@ -1,13 +1,9 @@
-#include <cassert>
-#include <algorithm>
-#include <iostream>
-
+#include "common.h"
 #include "problem5.h"
-#include "stopwatch.h"
 
 namespace
 {
-    long long gcd(long long a, long long b)
+    int64_t GCD(int64_t a, int64_t b)
     {
         while (true)
         {
@@ -20,21 +16,21 @@ namespace
         }
     }
 
-    long long lcm(long long a, long long b)
+    int64_t LCM(int64_t a, int64_t b)
     {
-        return a * b / gcd(a, b);
+        return a * b / GCD(a, b);
     }
 }
 
 namespace problem5
 {
-    void calc()
+    void solve()
     {
         StopWatch sw;
 
-        long long answer = 1;
+        int64_t answer = 1;
         for (int i = 2; i <= 20; ++i)
-            answer = lcm(answer, i);
+            answer = LCM(answer, i);
 
         const auto time = sw.GetElapsedMilliseconds();
         std::cout << "Answer5: " << answer << time << std::endl;

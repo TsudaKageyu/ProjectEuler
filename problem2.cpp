@@ -1,11 +1,9 @@
-#include <iostream>
-#include <array>
+#include "common.h"
 #include "problem2.h"
-#include "stopwatch.h"
 
 namespace problem2
 {
-    void calc()
+    void Solve()
     {
         StopWatch sw;
 

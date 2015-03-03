@@ -1,26 +1,31 @@
-#include <iostream>
+#include "common.h"
+#include "problem1.h"
 
 namespace
 {
     // Returns the sum of all the natural numbers no more than N.
     template <int N>
-    int f1()
+    int GetSumOfNaturalNumbers()
     {
         return (N + 1) * N / 2;
     }
 
     // Returns the sum of all the natural number multiples of N no more than L.
     template <int N, int L>
-    int f2()
+    int GetSumOfNaturalNumberMultiples()
     {
-        return N * f1<L / N>();
+        return N * GetSumOfNaturalNumbers<L / N>();
     }
 }
 
 namespace problem1
 {
-    void calc()
+    void Solve()
     {
-        std::cout << "Answer1: " << f2<3, 999>() + f2<5, 999>() - f2<15, 999>() << " (Constant Time)" << std::endl;
+        const int answer
+            = GetSumOfNaturalNumberMultiples<3, 999>()
+            + GetSumOfNaturalNumberMultiples<5, 999>()
+            - GetSumOfNaturalNumberMultiples<15, 999>();
+        std::cout << "Answer1: " << answer << " (Constant Time)" << std::endl;
     }
 }
