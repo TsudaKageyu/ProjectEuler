@@ -3,7 +3,8 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
-#include "problem2.h"
+
+#include "problem3.h"
 #include "stopwatch.h"
 
 namespace problem3
@@ -30,7 +31,7 @@ namespace problem3
 
         while (true)
         {
-            auto it3 = std::remove_if(it1 + 1, it2, [&](int x) { return (x % *it1 == 0); });
+            const auto it3 = std::remove_if(it1 + 1, it2, [&](int x) { return (x % *it1 == 0); });
             if (it3 == it2)
                 break;
 
@@ -44,14 +45,14 @@ namespace problem3
 
         for (auto it = it2; it >= it1; --it)
         {
-            auto d = std::div(num, static_cast<long long>(*it));
+            const auto d = std::div(num, static_cast<long long>(*it));
             if (d.rem == 0) {
                 answer = *it;
                 break;
             }
         }
 
-        const double elapsed = sw.GetElapsedMilliseconds();
-        std::cout << "Answer3: " << answer << " (" << elapsed << " ms)" << std::endl;
+        const auto time = sw.GetElapsedMilliseconds();
+        std::cout << "Answer3: " << answer << time << std::endl;
     }
 }
