@@ -26,6 +26,7 @@ namespace problem1
             = GetSumOfNaturalNumberMultiples<3, 999>()
             + GetSumOfNaturalNumberMultiples<5, 999>()
             - GetSumOfNaturalNumberMultiples<15, 999>();
-        std::cout << "Answer1: " << answer << " (Constant Time)" << std::endl;
+
+        Utils::PrintResult(1, answer, "Calculated at compile time");
     }
 }

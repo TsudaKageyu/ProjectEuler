@@ -57,6 +57,6 @@ namespace problem3
         }
 
         const auto time = sw.GetElapsedMilliseconds();
-        std::cout << "Answer3: " << answer << time << std::endl;
+        Utils::PrintResult(3, answer, time);
     }
 }

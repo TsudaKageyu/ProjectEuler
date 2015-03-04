@@ -33,6 +33,6 @@ namespace problem5
             answer = LCM(answer, i);
 
         const auto time = sw.GetElapsedMilliseconds();
-        std::cout << "Answer5: " << answer << time << std::endl;
+        Utils::PrintResult(5, answer, time);
     }
 }

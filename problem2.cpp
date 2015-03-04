@@ -21,6 +21,6 @@ namespace problem2
         } while (buf[1] <= 4000000);
 
         const auto time = sw.GetElapsedMilliseconds();
-        std::cout << "Answer2: " << answer << time << std::endl;
+        Utils::PrintResult(2, answer, time);
     }
 }
