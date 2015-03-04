@@ -43,12 +43,19 @@ namespace problem4
         StopWatch sw;
 
         int answer = 0;
-        for (int i = 100; i <= 999; ++i)
+
+        for (int i = 999; i >= 100; --i)
         {
-            for (int j = i; j <= 999; ++j)
+            if (i <= answer / 999)
+                break;
+
+            for (int j = 999; j >= i; --j)
             {
                 const int p = i * j;
-                if (p > answer && IsPalindromic(p))
+                if (p <= answer)
+                    break;
+
+                if (IsPalindromic(p))
                     answer = p;
             }
         }
