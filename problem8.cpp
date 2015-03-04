@@ -44,7 +44,17 @@ namespace problem8
             int64_t product = 1;
 
             for (size_t j = 0; j < 13; ++j)
+            {
                 product *= numbers[i + j];
+
+                // If encountered a 0, move to the next digit of it.
+
+                if (product == 0)
+                {
+                    i += j;
+                    break;
+                }
+            }
 
             if (product > answer)
                 answer = product;
