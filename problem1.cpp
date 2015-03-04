@@ -3,18 +3,11 @@
 
 namespace
 {
-    // Returns the sum of all the natural numbers no more than N.
-    template <int N>
-    int GetSumOfNaturalNumbers()
-    {
-        return (N + 1) * N / 2;
-    }
-
     // Returns the sum of all the natural number multiples of N no more than L.
     template <int N, int L>
     int GetSumOfNaturalNumberMultiples()
     {
-        return N * GetSumOfNaturalNumbers<L / N>();
+        return N * Utils::GetSumOfNaturalNumbers(L / N);
     }
 }
 

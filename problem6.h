@@ -1,6 +1,6 @@
 #pragma once
 
-namespace problem5
+namespace problem6
 {
     void Solve();
 }

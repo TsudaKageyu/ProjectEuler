@@ -24,7 +24,7 @@ namespace
 
 namespace problem5
 {
-    void solve()
+    void Solve()
     {
         StopWatch sw;
 
