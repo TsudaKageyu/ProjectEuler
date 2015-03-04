@@ -58,6 +58,6 @@ namespace Utils
 
     inline void PrintResult(int problem, int64_t answer, const std::string &time)
     {
-        ::printf("Answer %2d: %10ld (%14s)\n", problem, answer, time.c_str());
+        ::printf("Answer %2d: %11lld (%14s)\n", problem, answer, time.c_str());
     }
 }

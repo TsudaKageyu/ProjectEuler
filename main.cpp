@@ -5,6 +5,7 @@
 #include "problem5.h"
 #include "problem6.h"
 #include "problem7.h"
+#include "problem8.h"
 
 int main()
 {
@@ -15,6 +16,7 @@ int main()
     problem5::Solve();
     problem6::Solve();
     problem7::Solve();
+    problem8::Solve();
 
     return 0;
 }
