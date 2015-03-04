@@ -30,7 +30,9 @@ namespace Utils
         std::vector<T> numbers;
         numbers.resize(n);
 
-        for (size_t i = 0; i < numbers.size(); ++i)
+        // We never use [0] and [1], but they can make the code a bit clearer.
+
+        for (size_t i = 2; i < numbers.size(); ++i)
             numbers[i] = static_cast<int>(i);
 
         for (size_t i = 2; i < numbers.size() / 2; ++i)
