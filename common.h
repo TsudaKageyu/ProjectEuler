@@ -21,6 +21,39 @@ namespace Utils
         return (n + 1) * n / 2;
     }
 
+    // -------------------------------------------------------------------------
+    // Returns a list of the prime numbers no more than n.
+
+    template <typename T>
+    inline std::vector<T> GetPrimeNumbers(T n)
+    {
+        std::vector<T> numbers;
+        numbers.resize(n);
+
+        for (size_t i = 0; i < numbers.size(); ++i)
+            numbers[i] = static_cast<int>(i);
+
+        for (size_t i = 2; i < numbers.size() / 2; ++i)
+        {
+            if (numbers[i] == 0)
+                continue;
+
+            for (size_t j = i * 2; j < numbers.size(); j += i)
+                numbers[j] = 0;
+        }
+
+        std::vector<T> primes;
+        primes.reserve(numbers.size());
+
+        std::copy_if(
+            numbers.begin() + 2,
+            numbers.end(),
+            std::back_inserter(primes),
+            [](int x) { return x > 0; });
+
+        return primes;
+    }
+
     inline void PrintResult(int problem, int64_t answer, const std::string &time)
     {
         ::printf("Answer %2d: %10ld (%14s)\n", problem, answer, time.c_str());

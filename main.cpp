@@ -4,6 +4,7 @@
 #include "problem4.h"
 #include "problem5.h"
 #include "problem6.h"
+#include "problem7.h"
 
 int main()
 {
@@ -13,6 +14,7 @@ int main()
     problem4::Solve();
     problem5::Solve();
     problem6::Solve();
+    problem7::Solve();
 
     return 0;
 }

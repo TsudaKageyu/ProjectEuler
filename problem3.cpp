@@ -11,34 +11,7 @@ namespace problem3
 
         // List the prime numbers no more than sqrt(num).
 
-        std::vector<int> primes;
-        {
-            const int max_prime = static_cast<int>(std::sqrt(num) + 1);
-            assert(max_prime <= INT_MAX);
-
-            std::vector<int> numbers;
-            numbers.resize(static_cast<size_t>(max_prime + 1));
-
-            for (size_t i = 0; i < numbers.size(); ++i)
-                numbers[i] = static_cast<int>(i);
-
-            for (size_t i = 2; i < numbers.size() / 2; ++i)
-            {
-                if (numbers[i] == 0)
-                    continue;
-
-                for (size_t j = i * 2; j < numbers.size(); j += i)
-                    numbers[j] = 0;
-            }
-
-            primes.reserve(numbers.size());
-
-            std::copy_if(
-                numbers.begin() + 2,
-                numbers.end(),
-                std::back_inserter(primes),
-                [](int x) { return x > 0; });
-        }
+        const auto primes = Utils::GetPrimeNumbers<int>(static_cast<int>(std::sqrt(num) + 1));
 
         // Find the largest prime factor of num.
 
