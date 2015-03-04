@@ -11,34 +11,47 @@ namespace problem3
 
         // List the prime numbers no more than sqrt(num).
 
-        const int64_t max_prime = static_cast<int64_t>(std::sqrt(num));
+        const int64_t max_prime = static_cast<int64_t>(std::sqrt(num) + 1);
         assert(max_prime <= INT_MAX);
 
         std::vector<int> primes;
         primes.reserve(static_cast<int>(max_prime / 2));
 
+        primes.push_back(2);
+
         for (int i = 3; i <= max_prime; i += 2)
             primes.push_back(i);
 
-        auto it1 = primes.begin();
-        auto it2 = primes.end();
+        std::vector<int> tmp;
+        tmp.reserve(primes.size());
 
-        while (true)
+        for (size_t i = 1; i < primes.size() - 2; ++i)
         {
-            const auto it3 = std::remove_if(it1 + 1, it2, [&](int x) { return (x % *it1 == 0); });
-            if (it3 == it2)
+            if (primes[i] > primes.back() / 2)
                 break;
 
-            it2 = it3;
-            it1++;
+            tmp.resize(i + 1);
+            ::memcpy(tmp.data(), primes.data(), (i + 1) * sizeof(primes.front()));
+
+            for (size_t j = i + 1; j < primes.size() - 1; ++j)
+            {
+                if (primes[j] % primes[i] != 0)
+                    tmp.push_back(primes[j]);
+            }
+
+            std::swap(tmp, primes);
+            tmp.clear();
         }
 
         // Find the largest prime factor of num.
 
         int answer = 0;
 
-        for (auto it = it2; it >= it1; --it)
+        for (auto it = primes.rbegin(); it != primes.rend(); ++it)
         {
+            if (*it < 0)
+                continue;
+
             const auto d = std::div(num, static_cast<int64_t>(*it));
             if (d.rem == 0) {
                 answer = *it;
