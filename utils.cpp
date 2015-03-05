@@ -57,19 +57,21 @@ namespace Utils
         if (static_cast<uint32_t>(info[0]) < 0x80000004U)
             return "Unknown CPU";
 
-        std::string name;
-        name.resize(48);
+        std::vector<char> buf;
+        buf.resize(49);
 
         __cpuid(info.data(), 0x80000002);
-        ::memcpy(&name[0], &info, sizeof(info));
+        ::memcpy(&buf[0], &info, sizeof(info));
 
         __cpuid(info.data(), 0x80000003);
-        ::memcpy(&name[16], &info, sizeof(info));
+        ::memcpy(&buf[16], &info, sizeof(info));
 
         __cpuid(info.data(), 0x80000004);
-        ::memcpy(&name[32], &info, sizeof(info));
+        ::memcpy(&buf[32], &info, sizeof(info));
 
-        const size_t pos = name.find_first_not_of(" ");
+        std::string name(buf.data());
+
+        const size_t pos = name.find_first_not_of(" \r\n\t\v");
         if (pos != std::string::npos)
             name = name.substr(pos);
 
