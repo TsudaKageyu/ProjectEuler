@@ -1,5 +1,4 @@
-#include "common.h"
-#include "problem4.h"
+#include "../common.h"
 
 namespace
 {

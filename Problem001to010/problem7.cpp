@@ -1,5 +1,4 @@
-#include "common.h"
-#include "problem7.h"
+#include "../common.h"
 
 int64_t Problem7()
 {

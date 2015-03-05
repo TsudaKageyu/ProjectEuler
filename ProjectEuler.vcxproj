@@ -144,29 +144,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="problem1.cpp" />
-    <ClCompile Include="problem10.cpp" />
-    <ClCompile Include="problem2.cpp" />
-    <ClCompile Include="problem3.cpp" />
-    <ClCompile Include="problem4.cpp" />
-    <ClCompile Include="problem5.cpp" />
-    <ClCompile Include="problem6.cpp" />
-    <ClCompile Include="problem7.cpp" />
-    <ClCompile Include="problem8.cpp" />
-    <ClCompile Include="problem9.cpp" />
+    <ClCompile Include="Problem001to010\problem1.cpp" />
+    <ClCompile Include="Problem001to010\problem10.cpp" />
+    <ClCompile Include="Problem001to010\problem2.cpp" />
+    <ClCompile Include="Problem001to010\problem3.cpp" />
+    <ClCompile Include="Problem001to010\problem4.cpp" />
+    <ClCompile Include="Problem001to010\problem5.cpp" />
+    <ClCompile Include="Problem001to010\problem6.cpp" />
+    <ClCompile Include="Problem001to010\problem7.cpp" />
+    <ClCompile Include="Problem001to010\problem8.cpp" />
+    <ClCompile Include="Problem001to010\problem9.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h" />
-    <ClInclude Include="problem1.h" />
-    <ClInclude Include="problem10.h" />
-    <ClInclude Include="problem2.h" />
-    <ClInclude Include="problem3.h" />
-    <ClInclude Include="problem4.h" />
-    <ClInclude Include="problem5.h" />
-    <ClInclude Include="problem6.h" />
-    <ClInclude Include="problem7.h" />
-    <ClInclude Include="problem8.h" />
-    <ClInclude Include="problem9.h" />
+    <ClInclude Include="Problem001to010\problems.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
