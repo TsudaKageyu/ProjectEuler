@@ -2,6 +2,13 @@
 
 namespace Utils
 {
+    const int64_t PrimeMax = 2000000;
+
+    // -------------------------------------------------------------------------
+    // Returns a list of prime numbers no more than Utils::PrimeMax.
+
+    const std::vector<int64_t> & GetPrimeTable();
+
     // -------------------------------------------------------------------------
     // Returns the sum of all the natural numbers no more than n.
 
@@ -18,41 +25,6 @@ namespace Utils
     inline T GetSumOfNaturalNumberMultiples()
     {
         return N * Utils::GetSumOfNaturalNumbers<T>(L / N);
-    }
-
-    // -------------------------------------------------------------------------
-    // Returns a list of the prime numbers no more than n.
-
-    template <typename T>
-    inline std::vector<T> GetPrimeNumbers(T n)
-    {
-        std::vector<T> numbers;
-        numbers.resize(n);
-
-        // We never use [0] and [1], but they can make the code a bit clearer.
-
-        for (size_t i = 2; i < numbers.size(); ++i)
-            numbers[i] = static_cast<int>(i);
-
-        for (size_t i = 2; i < numbers.size() / 2; ++i)
-        {
-            if (numbers[i] == 0)
-                continue;
-
-            for (size_t j = i * 2; j < numbers.size(); j += i)
-                numbers[j] = 0;
-        }
-
-        std::vector<T> primes;
-        primes.reserve(numbers.size());
-
-        std::copy_if(
-            numbers.begin() + 2,
-            numbers.end(),
-            std::back_inserter(primes),
-            [](int x) { return x > 0; });
-
-        return primes;
     }
 
     // -------------------------------------------------------------------------
@@ -79,36 +51,6 @@ namespace Utils
     inline T LCM(T a, T b)
     {
         return a * b / GCD(a, b);
-    }
-
-    // -------------------------------------------------------------------------
-    // Returns the least common multiple of a and b.
-
-    inline std::string GetCPUName()
-    {
-        std::array<int, 4> info;
-        __cpuid(info.data(), 0x80000000);
-
-        if (static_cast<uint32_t>(info[0]) < 0x80000004U)
-            return "Unknown CPU";
-
-        std::string name;
-        name.resize(48);
-
-        __cpuid(info.data(), 0x80000002);
-        ::memcpy(&name[0], &info, sizeof(info));
-
-        __cpuid(info.data(), 0x80000003);
-        ::memcpy(&name[16], &info, sizeof(info));
-
-        __cpuid(info.data(), 0x80000004);
-        ::memcpy(&name[32], &info, sizeof(info));
-
-        const size_t pos = name.find_first_not_of(" ");
-        if (pos != std::string::npos)
-            name = name.substr(pos);
-
-        return name;
     }
 
     // -------------------------------------------------------------------------
@@ -178,4 +120,9 @@ namespace Utils
         cout << " (" << setw(TimeWidth) << fixed << setprecision(TimePrecision) << time << " ms)";
         cout << endl;
     }
+
+    // -------------------------------------------------------------------------
+    // Returns the running CPU name.
+
+    std::string GetCPUName();
 }

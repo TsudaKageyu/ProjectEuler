@@ -3,11 +3,10 @@
 
 int64_t Problem10()
 {
-    // List the prime numbers below two million.
+    const auto primes = Utils::GetPrimeTable();
 
-    const auto primes = Utils::GetPrimeNumbers<int64_t>(1999999);
+    const auto itMin = primes.begin();
+    const auto itMax = std::lower_bound(primes.begin(), primes.end(), 1999999);
 
-    // Calculate the sum.
-
-    return std::accumulate(primes.begin(), primes.end(), 0LL);
+    return std::accumulate(itMin, itMax, 0LL);
 }
