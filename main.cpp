@@ -26,6 +26,7 @@ int main()
     Utils::Solve<int64_t>(10, [] { return Problem10(); });
 
     Utils::Solve<int64_t>(11, [] { return Problem11(); });
+    Utils::Solve<int64_t>(12, [] { return Problem12(); });
 
     return 0;
 }
