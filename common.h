@@ -28,6 +28,15 @@ namespace Utils
     }
 
     // -------------------------------------------------------------------------
+    // Returns the sum of all the natural number multiples of N no more than L.
+
+    template <typename T, T N, T L>
+    inline T GetSumOfNaturalNumberMultiples()
+    {
+        return N * Utils::GetSumOfNaturalNumbers<T>(L / N);
+    }
+
+    // -------------------------------------------------------------------------
     // Returns a list of the prime numbers no more than n.
 
     template <typename T>
@@ -60,6 +69,32 @@ namespace Utils
             [](int x) { return x > 0; });
 
         return primes;
+    }
+
+    // -------------------------------------------------------------------------
+    // Returns the greatest common divisor of a and b.
+
+    template <typename T>
+    inline T GCD(T a, T b)
+    {
+        while (true)
+        {
+            const auto d = std::div(a, b);
+            if (d.rem == 0)
+                return b;
+
+            a = b;
+            b = d.rem;
+        }
+    }
+
+    // -------------------------------------------------------------------------
+    // Returns the least common multiple of a and b.
+
+    template <typename T>
+    inline T LCM(T a, T b)
+    {
+        return a * b / GCD(a, b);
     }
 
     // -------------------------------------------------------------------------
