@@ -5,15 +5,15 @@ int64_t Problem9()
 {
     for (int64_t a = 1; a <= 995; ++a)
     {
-        for (int64_t b = a + 1; b <= 998 - a; ++b)
-        {
-            const int64_t c = 1000 - a - b;
+        const int64_t tmp1 = 1000000LL - 2000 * a;
+        const int64_t tmp2 = 2000LL - 2 * a;
+        if (tmp1 % tmp2 != 0)
+            continue;
 
-            if (a * a + b * b != c * c)
-                continue;
+        const int64_t b = tmp1 / tmp2;
+        const int64_t c = 1000LL - a - b;
 
-            return a * b * c;
-        }
+        return a * b * c;
     }
 
     return 0;
