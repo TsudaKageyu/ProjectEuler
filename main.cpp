@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "utils.h"
 #include "Problem001to010/problems.h"
+#include "Problem011to020/problems.h"
 
 int main()
 {
@@ -23,6 +24,8 @@ int main()
     Utils::Solve<int64_t>( 8, [] { return Problem8(); });
     Utils::Solve<int64_t>( 9, [] { return Problem9(); });
     Utils::Solve<int64_t>(10, [] { return Problem10(); });
+
+    Utils::Solve<int64_t>(11, [] { return Problem11(); });
 
     return 0;
 }

@@ -10,6 +10,9 @@
     <Filter Include="Problem001to010">
       <UniqueIdentifier>{ffbbb771-7b66-4d99-a894-aca5eee710cc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Problem011to020">
+      <UniqueIdentifier>{f2a5595d-6b5e-498a-a92c-7db9dbca3a59}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Problem001to010\problems.h">
@@ -20,6 +23,9 @@
     </ClInclude>
     <ClInclude Include="utils.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Problem011to020\problems.h">
+      <Filter>Problem011to020</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +67,9 @@
     </ClCompile>
     <ClCompile Include="utils.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem011to020\problem11.cpp">
+      <Filter>Problem011to020</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
