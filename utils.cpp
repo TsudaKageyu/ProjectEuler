@@ -10,10 +10,13 @@ namespace
 
         // We never use [0] and [1], but they can make the code a bit clearer.
 
-        for (size_t i = 2; i < numbers.size(); ++i)
+        numbers[2] = 2;
+
+        for (size_t i = 3; i < numbers.size(); i += 2)
             numbers[i] = static_cast<int>(i);
 
-        for (size_t i = 2; i < numbers.size() / 2; ++i)
+        const size_t loopMax = static_cast<size_t>(std::sqrt(numbers.size()));
+        for (size_t i = 3; i <= loopMax; ++i)
         {
             if (numbers[i] == 0)
                 continue;
