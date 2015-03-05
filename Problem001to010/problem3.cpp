@@ -5,7 +5,7 @@ int64_t Problem3()
 {
     const int64_t num = 600851475143;
 
-    const auto primes = Utils::GetPrimeTable();
+    const auto &primes = Utils::GetPrimeTable();
 
     for (auto it = primes.crbegin(); it != primes.crend(); ++it)
     {

@@ -8,7 +8,7 @@ int main()
     std::cout << std::endl;
 
     std::cout << "Preparing prime numbers <= " << Utils::PrimeMax << ": ";
-    const auto table = Utils::GetPrimeTable();
+    const auto &table = Utils::GetPrimeTable();
 
     std::cout << table.size() << " prime numbers." << std::endl;
     std::cout << std::endl;
