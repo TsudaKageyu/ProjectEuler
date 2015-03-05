@@ -3,7 +3,7 @@
 
 int64_t Problem9()
 {
-    for (int64_t a = 1; a <= 995; ++a)
+    for (int64_t a = 1; a < 1000 / 2; ++a)
     {
         const int64_t tmp1 = 1000000LL - 2000 * a;
         const int64_t tmp2 = 2000LL - 2 * a;
