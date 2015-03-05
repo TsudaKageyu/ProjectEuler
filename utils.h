@@ -35,12 +35,12 @@ namespace Utils
     {
         while (true)
         {
-            const auto d = std::div(a, b);
-            if (d.rem == 0)
+            const auto rem = a % b;
+            if (rem == 0)
                 return b;
 
             a = b;
-            b = d.rem;
+            b = rem;
         }
     }
 
