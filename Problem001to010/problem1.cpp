@@ -1,4 +1,5 @@
-#include "../common.h"
+#include "stdafx.h"
+#include "utils.h"
 
 int64_t Problem1()
 {

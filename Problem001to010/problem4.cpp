@@ -1,4 +1,5 @@
-#include "../common.h"
+#include "stdafx.h"
+#include "utils.h"
 
 namespace
 {

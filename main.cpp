@@ -1,4 +1,5 @@
-#include "common.h"
+#include "stdafx.h"
+#include "utils.h"
 #include "Problem001to010/problems.h"
 
 int main()
