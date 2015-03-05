@@ -3,7 +3,7 @@
 
 namespace
 {
-    const std::array<int, 400> Table2 =
+    const std::array<int, 400> Table =
     {
          8,  2, 22, 97, 38, 15,  0, 40,  0, 75,  4,  5,  7, 78, 52, 12, 50, 77, 91,  8,
         49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48,  4, 56, 62,  0,
@@ -39,10 +39,10 @@ int64_t Problem11()
         for (size_t x = 0; x < 20; ++x)
         {
             const int64_t product
-                = Table2[x + y * 20 +  0]
-                * Table2[x + y * 20 + 20]
-                * Table2[x + y * 20 + 40]
-                * Table2[x + y * 20 + 60];
+                = Table[x + y * 20 +  0]
+                * Table[x + y * 20 + 20]
+                * Table[x + y * 20 + 40]
+                * Table[x + y * 20 + 60];
             if (product > answer)
                 answer = product;
         }
@@ -55,10 +55,10 @@ int64_t Problem11()
         for (size_t x = 0; x < 16; ++x)
         {
             const int64_t product
-                = Table2[x + y * 20 + 0]
-                * Table2[x + y * 20 + 1]
-                * Table2[x + y * 20 + 2]
-                * Table2[x + y * 20 + 3];
+                = Table[x + y * 20 + 0]
+                * Table[x + y * 20 + 1]
+                * Table[x + y * 20 + 2]
+                * Table[x + y * 20 + 3];
             if (product > answer)
                 answer = product;
         }
@@ -74,27 +74,25 @@ int64_t Problem11()
 
             {
                 const int64_t product
-                    = Table2[x + y * 20 +  0]
-                    * Table2[x + y * 20 + 21]
-                    * Table2[x + y * 20 + 42]
-                    * Table2[x + y * 20 + 63];
+                    = Table[x + y * 20 +  0]
+                    * Table[x + y * 20 + 21]
+                    * Table[x + y * 20 + 42]
+                    * Table[x + y * 20 + 63];
                 if (product > answer)
                     answer = product;
             }
 
             {
                 const int64_t product
-                    = Table2[x + y * 20 +  3]
-                    * Table2[x + y * 20 + 22]
-                    * Table2[x + y * 20 + 41]
-                    * Table2[x + y * 20 + 60];
+                    = Table[x + y * 20 +  3]
+                    * Table[x + y * 20 + 22]
+                    * Table[x + y * 20 + 41]
+                    * Table[x + y * 20 + 60];
                 if (product > answer)
                     answer = product;
             }
         }
     }
-
-
 
     return answer;
 }

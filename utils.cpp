@@ -3,6 +3,9 @@
 
 namespace
 {
+    // -------------------------------------------------------------------------
+    // Helper function for initializing the prime number table.
+
     std::vector<int64_t> InitializePrimeTable(int64_t n)
     {
         std::vector<int64_t> numbers;
@@ -77,4 +80,24 @@ namespace Utils
 
         return name;
     }
+
+    // -------------------------------------------------------------------------
+    // StopWatch class implementation.
+
+    StopWatch::StopWatch()
+    {
+        ::QueryPerformanceCounter(&start);
+    }
+
+    double StopWatch::GetElapsedMilliseconds() const
+    {
+        LARGE_INTEGER end;
+        ::QueryPerformanceCounter(&end);
+
+        LARGE_INTEGER freq;
+        ::QueryPerformanceFrequency(&freq);
+
+        return (end.QuadPart - start.QuadPart) * 1000.0 / freq.QuadPart;
+    }
+
 }

@@ -2,7 +2,13 @@
 
 namespace Utils
 {
-    const int64_t PrimeMax = 2000000;
+    const int64_t PrimeMax  = 2000000;
+
+    const size_t TestCount = 10;
+
+    const size_t AnswerWidth   = 12;
+    const size_t TimeWidth     = 10;
+    const size_t TimePrecision = 4;
 
     // -------------------------------------------------------------------------
     // Returns a list of prime numbers no more than Utils::PrimeMax.
@@ -62,21 +68,9 @@ namespace Utils
         LARGE_INTEGER start;
 
     public:
-        StopWatch()
-        {
-            ::QueryPerformanceCounter(&start);
-        }
+        StopWatch();
 
-        double GetElapsedMilliseconds() const
-        {
-            LARGE_INTEGER end;
-            ::QueryPerformanceCounter(&end);
-
-            LARGE_INTEGER freq;
-            ::QueryPerformanceFrequency(&freq);
-
-            return (end.QuadPart - start.QuadPart) * 1000.0 / freq.QuadPart;
-        }
+        double GetElapsedMilliseconds() const;
 
     private:
         StopWatch(const StopWatch &);
@@ -89,11 +83,6 @@ namespace Utils
     template <typename T>
     void Solve(int number, const std::function<T ()> &solver)
     {
-        const size_t AnswerWidth   = 12;
-        const size_t TimeWidth     = 11;
-        const size_t TimePrecision = 5;
-        const size_t TestCount     = 3;
-
         using namespace std;
 
         cout << "Answer " << setw(2) << number << ": ";
