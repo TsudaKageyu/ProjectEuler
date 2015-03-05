@@ -3,20 +3,16 @@
 
 int64_t Problem9()
 {
-    for (int64_t a = 1; a <= 999; ++a)
+    for (int64_t a = 1; a <= 995; ++a)
     {
-        for (int64_t b = a + 1; b <= 999; ++b)
+        for (int64_t b = a + 1; b <= 998 - a; ++b)
         {
-            for (int64_t c = b + 1; c <= 998; ++c)
-            {
-                if (a + b + c != 1000)
-                    continue;
+            const int64_t c = 1000 - a - b;
 
-                if (a * a + b * b != c * c)
-                    continue;
+            if (a * a + b * b != c * c)
+                continue;
 
-                return a * b * c;
-            }
+            return a * b * c;
         }
     }
 
