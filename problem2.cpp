@@ -1,25 +1,20 @@
 #include "common.h"
+#include "problem2.h"
 
-namespace problem2
+int64_t Problem2()
 {
-    void Solve()
+    int64_t answer = 0;
+    std::array<int64_t, 2> buf = { 1, 2 };
+
+    do
     {
-        StopWatch sw;
+        if ((buf[1] & 1) == 0)
+            answer += buf[1];
 
-        int answer = 0;
-        std::array<int, 2> buf = { 1, 2 };
+        const int64_t next = buf[0] + buf[1];
+        buf[0] = buf[1];
+        buf[1] = next;
+    } while (buf[1] <= 4000000);
 
-        do
-        {
-            if ((buf[1] & 1) == 0)
-                answer += buf[1];
-
-            const int next = buf[0] + buf[1];
-            buf[0] = buf[1];
-            buf[1] = next;
-        } while (buf[1] <= 4000000);
-
-        const auto time = sw.GetElapsedMilliseconds();
-        Utils::PrintResult(2, answer, time);
-    }
+    return answer;
 }

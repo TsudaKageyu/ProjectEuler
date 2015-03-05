@@ -1,24 +1,12 @@
 #include "common.h"
+#include "problem7.h"
 
-namespace problem7
+int64_t Problem7()
 {
-    void Solve()
+    for (int n = 100000;; n += 100000)
     {
-        StopWatch sw;
-
-        int answer;
-
-        for (int n = 100000; ; n += 100000)
-        {
-            const auto primes = Utils::GetPrimeNumbers<int>(n);
-            if (primes.size() >= 10001)
-            {
-                answer = primes[10000];
-                break;
-            }
-        }
-
-        const auto time = sw.GetElapsedMilliseconds();
-        Utils::PrintResult(7, answer, time);
+        const auto primes = Utils::GetPrimeNumbers<int64_t>(n);
+        if (primes.size() >= 10001)
+            return primes[10000];
     }
 }

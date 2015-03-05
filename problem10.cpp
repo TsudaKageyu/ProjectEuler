@@ -1,20 +1,13 @@
 #include "common.h"
+#include "problem10.h"
 
-namespace problem10
+int64_t Problem10()
 {
-    void Solve()
-    {
-        StopWatch sw;
+    // List the prime numbers below two million.
 
-        // List the prime numbers below two million.
+    const auto primes = Utils::GetPrimeNumbers<int64_t>(1999999);
 
-        const auto primes = Utils::GetPrimeNumbers<int64_t>(1999999);
+    // Calculate the sum.
 
-        // Calculate the sum.
-
-        const int64_t answer = std::accumulate(primes.begin(), primes.end(), 0LL);
-
-        const auto time = sw.GetElapsedMilliseconds();
-        Utils::PrintResult(10, answer, time);
-    }
+    return std::accumulate(primes.begin(), primes.end(), 0LL);
 }

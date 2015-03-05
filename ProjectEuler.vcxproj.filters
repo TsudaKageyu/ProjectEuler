@@ -15,9 +15,6 @@
     <ClInclude Include="problem4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="stopwatch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="problem2.h">
       <Filter>Header Files</Filter>
     </ClInclude>

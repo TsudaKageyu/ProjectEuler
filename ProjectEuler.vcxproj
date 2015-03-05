@@ -167,7 +167,6 @@
     <ClInclude Include="problem7.h" />
     <ClInclude Include="problem8.h" />
     <ClInclude Include="problem9.h" />
-    <ClInclude Include="stopwatch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

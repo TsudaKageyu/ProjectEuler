@@ -1,14 +1,20 @@
+#pragma once
+
 #include <cassert>
 #include <climits>
 #include <cstdint>
-#include <cstdio>
 #include <algorithm>
 #include <array>
+#include <functional>
+#include <iomanip>
+#include <iostream>
 #include <numeric>
 #include <string>
 #include <vector>
 
-#include "stopwatch.h"
+#define STRICT
+#define NOMINMAX
+#include <windows.h>
 
 namespace Utils
 {
@@ -56,8 +62,71 @@ namespace Utils
         return primes;
     }
 
-    inline void PrintResult(int problem, int64_t answer, const std::string &time)
+    // -------------------------------------------------------------------------
+    // Helper class for measuring the processing time.
+
+    class StopWatch
     {
-        ::printf("Answer %2d: %12lld (%14s)\n", problem, answer, time.c_str());
+    private:
+        LARGE_INTEGER start;
+
+    public:
+        StopWatch()
+        {
+            ::QueryPerformanceCounter(&start);
+        }
+
+        double GetElapsedMilliseconds() const
+        {
+            LARGE_INTEGER end;
+            ::QueryPerformanceCounter(&end);
+
+            LARGE_INTEGER freq;
+            ::QueryPerformanceFrequency(&freq);
+
+            return (end.QuadPart - start.QuadPart) * 1000.0 / freq.QuadPart;
+        }
+
+    private:
+        StopWatch(const StopWatch &);
+        StopWatch &operator=(const StopWatch &);
+    };
+
+    // -------------------------------------------------------------------------
+    // Helper function for printing the results.
+
+    template <typename T>
+    void Solve(int number, const std::function<T ()> &solver)
+    {
+        const size_t AnswerWidth   = 12;
+        const size_t TimeWidth     = 11;
+        const size_t TimePrecision = 5;
+        const size_t TestCount     = 3;
+
+        using namespace std;
+
+        cout << "Answer " << setw(2) << number << ": ";
+
+        array<T, TestCount> answers;
+
+        const StopWatch sw;
+
+        for (auto &answer : answers)
+            answer = solver();
+
+        const double time = sw.GetElapsedMilliseconds() / TestCount;
+
+        for (size_t i = 0; i < answers.size(); ++i)
+        {
+            if (answers[i] != answers[0])
+            {
+                cout << "Inconsistent!" << endl;
+                return;
+            }
+        }
+
+        cout << setw(AnswerWidth) << answers[0];
+        cout << " (" << setw(TimeWidth) << fixed << setprecision(TimePrecision) << time << " ms)";
+        cout << endl;
     }
 }

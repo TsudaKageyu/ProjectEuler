@@ -1,6 +1,3 @@
 #pragma once
 
-namespace problem6
-{
-    void Solve();
-}
+int64_t Problem6();

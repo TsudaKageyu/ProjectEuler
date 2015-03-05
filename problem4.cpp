@@ -1,28 +1,29 @@
 #include "common.h"
+#include "problem4.h"
 
 namespace
 {
-    template <int N, int M>
+    template <int64_t N, int64_t M>
     struct Power
     {
-        static const int value = N * Power<N, M - 1>::value;
+        static const int64_t value = N * Power<N, M - 1>::value;
     };
 
-    template <int N>
+    template <int64_t N>
     struct Power<N, 0>
     {
-        static const int value = 1;
+        static const int64_t value = 1;
     };
 
     // Returns D + 1 th digit of n.
-    template <int D>
-    int GetDigit(int n)
+    template <int64_t D>
+    int64_t GetDigit(int64_t n)
     {
         return (n / Power<10, D>::value) % 10;
     }
 
     // Checks if the number is palindromic like "123321".
-    bool IsPalindromic(int n)
+    bool IsPalindromic(int64_t n)
     {
         assert(100 * 100 <= n && n <= 999 * 999);
 
@@ -33,33 +34,27 @@ namespace
     }
 }
 
-namespace problem4
+int64_t Problem4()
 {
-    void Solve()
+    assert(IsPalindromic(123321));
+
+    int64_t answer = 0;
+
+    for (int64_t i = 999; i >= 100; --i)
     {
-        assert(IsPalindromic(123321));
+        if (i <= answer / 999)
+            break;
 
-        StopWatch sw;
-
-        int answer = 0;
-
-        for (int i = 999; i >= 100; --i)
+        for (int j = 999; j >= i; --j)
         {
-            if (i <= answer / 999)
+            const int64_t p = i * j;
+            if (p <= answer)
                 break;
 
-            for (int j = 999; j >= i; --j)
-            {
-                const int p = i * j;
-                if (p <= answer)
-                    break;
-
-                if (IsPalindromic(p))
-                    answer = p;
-            }
+            if (IsPalindromic(p))
+                answer = p;
         }
-
-        const auto time = sw.GetElapsedMilliseconds();
-        Utils::PrintResult(4, answer, time);
     }
+
+    return answer;
 }

@@ -1,4 +1,5 @@
 #include "common.h"
+#include "problem8.h"
 
 namespace
 {
@@ -25,42 +26,36 @@ namespace
         "71636269561882670428252483600823257530420752963450";
 }
 
-namespace problem8
+int64_t Problem8()
 {
-    void Solve()
+    std::vector<int64_t> numbers;
+    numbers.reserve(Table.size());
+
+    for (const auto c : Table)
+        numbers.push_back(static_cast<int64_t>(c)-static_cast<int64_t>('0'));
+
+    int64_t answer = 0;
+
+    for (size_t i = 0; i < numbers.size() - 12; ++i)
     {
-        StopWatch sw;
+        int64_t product = 1;
 
-        std::vector<int64_t> numbers;
-        numbers.reserve(Table.size());
-
-        for (const auto c : Table)
-            numbers.push_back(static_cast<int64_t>(c) - static_cast<int64_t>('0'));
-
-        int64_t answer = 0;
-
-        for (size_t i = 0; i < numbers.size() - 12; ++i)
+        for (size_t j = 0; j < 13; ++j)
         {
-            int64_t product = 1;
+            product *= numbers[i + j];
 
-            for (size_t j = 0; j < 13; ++j)
+            // If encountered a 0, move to the next digit of it.
+
+            if (product == 0)
             {
-                product *= numbers[i + j];
-
-                // If encountered a 0, move to the next digit of it.
-
-                if (product == 0)
-                {
-                    i += j;
-                    break;
-                }
+                i += j;
+                break;
             }
-
-            if (product > answer)
-                answer = product;
         }
 
-        const auto time = sw.GetElapsedMilliseconds();
-        Utils::PrintResult(8, answer, time);
+        if (product > answer)
+            answer = product;
     }
+
+    return answer;
 }

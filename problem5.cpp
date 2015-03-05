@@ -1,4 +1,5 @@
 #include "common.h"
+#include "problem5.h"
 
 namespace
 {
@@ -21,17 +22,11 @@ namespace
     }
 }
 
-namespace problem5
+int64_t Problem5()
 {
-    void Solve()
-    {
-        StopWatch sw;
+    int64_t answer = 1;
+    for (int i = 2; i <= 20; ++i)
+        answer = LCM(answer, i);
 
-        int64_t answer = 1;
-        for (int i = 2; i <= 20; ++i)
-            answer = LCM(answer, i);
-
-        const auto time = sw.GetElapsedMilliseconds();
-        Utils::PrintResult(5, answer, time);
-    }
+    return answer;
 }
