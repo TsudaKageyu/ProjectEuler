@@ -15,3 +15,4 @@
 #define STRICT
 #define NOMINMAX
 #include <windows.h>
+#include <intrin.h>

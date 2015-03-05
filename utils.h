@@ -82,6 +82,36 @@ namespace Utils
     }
 
     // -------------------------------------------------------------------------
+    // Returns the least common multiple of a and b.
+
+    inline std::string GetCPUName()
+    {
+        std::array<int, 4> info;
+        __cpuid(info.data(), 0x80000000);
+
+        if (static_cast<uint32_t>(info[0]) < 0x80000004U)
+            return "Unknown CPU";
+
+        std::string name;
+        name.resize(48);
+
+        __cpuid(info.data(), 0x80000002);
+        ::memcpy(&name[0], &info, sizeof(info));
+
+        __cpuid(info.data(), 0x80000003);
+        ::memcpy(&name[16], &info, sizeof(info));
+
+        __cpuid(info.data(), 0x80000004);
+        ::memcpy(&name[32], &info, sizeof(info));
+
+        const size_t pos = name.find_first_not_of(" ");
+        if (pos != std::string::npos)
+            name = name.substr(pos);
+
+        return name;
+    }
+
+    // -------------------------------------------------------------------------
     // Helper class for measuring the processing time.
 
     class StopWatch

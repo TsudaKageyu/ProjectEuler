@@ -2,8 +2,13 @@
 #include "utils.h"
 #include "Problem001to010/problems.h"
 
+#include <intrin.h>
+
 int main()
 {
+    std::cout << Utils::GetCPUName() << std::endl;
+    std::cout << std::endl;
+
     Utils::Solve<int64_t>( 1, [] { return Problem1(); });
     Utils::Solve<int64_t>( 2, [] { return Problem2(); });
     Utils::Solve<int64_t>( 3, [] { return Problem3(); });
