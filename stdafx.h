@@ -11,6 +11,7 @@
 #include <numeric>
 #include <string>
 #include <vector>
+#include <boost/multiprecision/cpp_int.hpp>
 
 #define STRICT
 #define NOMINMAX
