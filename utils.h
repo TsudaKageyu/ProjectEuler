@@ -60,6 +60,40 @@ namespace Utils
     }
 
     // -------------------------------------------------------------------------
+    // Returns the factorial of n.
+
+    template <typename T, typename U>
+    inline T GetFactorial(U n)
+    {
+        T f = 1;
+
+        for (U i = 2; i <= n; ++i)
+            f *= i;
+
+        return f;
+    }
+
+    // -------------------------------------------------------------------------
+    // Returns the sum of all digits of n.
+
+    template <typename T = int64_t, typename U>
+    inline T GetSumOfDigits(U n)
+    {
+        const auto s = n.str();
+
+        std::vector<int> digits;
+        digits.reserve(s.size());
+
+        std::transform(
+            s.begin(),
+            s.end(),
+            std::back_inserter(digits),
+            [](char c) { return static_cast<int>(c) - '0'; });
+
+        return std::accumulate(digits.begin(), digits.end(), static_cast<T>(0));
+    }
+
+    // -------------------------------------------------------------------------
     // Helper class for measuring the processing time.
 
     class StopWatch
