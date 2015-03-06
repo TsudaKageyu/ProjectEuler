@@ -112,32 +112,40 @@ std::string Problem13()
 {
     const size_t len = ::strlen(Numbers[0]);
 
-    std::vector<int> sum(len + 2);
+    std::vector<int> sum(len / 5 + 1);
 
     for (const auto &num : Numbers)
     {
         const char *p = &num[len - 1];
 
-        for (size_t i = 0; i < len; ++i)
-            sum[i] += *p-- - '0';
-    }
-
-    for (size_t i = 0; i < len + 1; ++i)
-    {
-        if (sum[i] >= 10)
+        for (size_t i = 0; i < len / 5; ++i)
         {
-            sum[i + 1] += sum[i] / 10;
-            sum[i] = sum[i] % 10;
+            sum[i] += (*p-- - '0') *     1;
+            sum[i] += (*p-- - '0') *    10;
+            sum[i] += (*p-- - '0') *   100;
+            sum[i] += (*p-- - '0') *  1000;
+            sum[i] += (*p-- - '0') * 10000;
         }
     }
 
-    std::string answer(10, ' ');
+    for (size_t i = 0; i < len / 5; ++i)
     {
-        auto it = sum.crbegin();
-
-        for (size_t i = 0; i < answer.size(); ++i)
-            answer[i] = static_cast<char>('0' + *it++);
+        sum[i + 1] += sum[i] / 100000;
+        sum[i] = sum[i] % 100000;
     }
 
-    return answer;
+    std::string answer(15, ' ');
+
+    for (int i = 0; i < answer.size() / 5; ++i)
+    {
+        answer[i * 5 + 0] = static_cast<char>(((sum[i] / 10000) % 10) + '0');
+        answer[i * 5 + 1] = static_cast<char>(((sum[i] /  1000) % 10) + '0');
+        answer[i * 5 + 2] = static_cast<char>(((sum[i] /   100) % 10) + '0');
+        answer[i * 5 + 3] = static_cast<char>(((sum[i] /    10) % 10) + '0');
+        answer[i * 5 + 4] = static_cast<char>(((sum[i] /     1) % 10) + '0');
+    }
+
+    const size_t pos = answer.find_first_not_of('0');
+
+    return answer.substr(pos, 10);
 }
