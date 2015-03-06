@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "utils.h"
 
-uint64_t Problem14()
+int64_t Problem14()
 {
     const int64_t MaxNum = 1000000;
 
