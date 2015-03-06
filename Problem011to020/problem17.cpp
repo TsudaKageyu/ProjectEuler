@@ -4,7 +4,7 @@
 namespace
 {
     // The length of words "one", "two", ... "nineteen"
-    const std::array<int, 20> Table1 = {
+    const std::array<int, 20> DaysOfMonths = {
         0, 3, 3, 5, 4, 4, 3, 5, 5, 4, 3, 6, 6, 8, 8, 7, 7, 9, 8, 8 };
 
     // The length of words "twenty", "thirty", ... "ninety"
@@ -22,7 +22,7 @@ int64_t Problem17()
         {
             if (h >= 1)
             {
-                answer += (Table1[h] + 7);  // "one"..."nine" + "hundred"
+                answer += (DaysOfMonths[h] + 7);  // "one"..."nine" + "hundred"
 
                 if (n >= 1)
                     answer += 3;            // "and"
@@ -30,12 +30,12 @@ int64_t Problem17()
 
             if (n < 20)
             {
-                answer += Table1[n];        // "one"..."nineteen"
+                answer += DaysOfMonths[n];        // "one"..."nineteen"
             }
             else
             {
                 answer += Table2[n / 10];   // "twenty"..."ninety"
-                answer += Table1[n % 10];   // "one"..."nine"
+                answer += DaysOfMonths[n % 10];   // "one"..."nine"
             }
         }
     }
