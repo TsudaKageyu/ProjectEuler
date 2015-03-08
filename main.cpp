@@ -16,7 +16,7 @@ int main()
     std::cout << table.size() << " prime numbers." << std::endl;
     std::cout << std::endl;
 
-    Utils::Solve<int64_t>(21, [] { return Problem21(); });
+    Utils::Solve<int64_t>(22, [] { return Problem22(); });
     std::cout << std::endl;
 
     Utils::Solve<int64_t>( 1, [] { return Problem1(); });
@@ -40,6 +40,8 @@ int main()
     Utils::Solve<int64_t>(18, [] { return Problem18(); });
     Utils::Solve<int64_t>(19, [] { return Problem19(); });
     Utils::Solve<int64_t>(20, [] { return Problem20(); });
+
+    Utils::Solve<int64_t>(21, [] { return Problem21(); });
 
     Utils::Solve<int64_t>(67, [] { return Problem67(); });
 
