@@ -20,23 +20,19 @@ namespace
         { 0, 63, 66,  4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31,    },
         { 0,  4, 62, 98, 27, 23,  9, 70, 98, 73, 93, 38, 53, 60,  4, 23 },
     }};
-
-    template <size_t ROWS>
-    int64_t GetMaximumSumOfTriangle(std::array<std::array<int, ROWS + 1>, ROWS> nums)
-    {
-        for (size_t r = 1; r < nums.size(); ++r)
-        {
-            for (size_t c = 1; c <= r + 1; ++c)
-            {
-                nums[r][c] += std::max(nums[r - 1][c - 1], nums[r - 1][c]);
-            }
-        }
-
-        return *std::max_element(nums.back().begin(), nums.back().end());
-    }
 }
 
 int64_t Problem18()
 {
-    return GetMaximumSumOfTriangle<15>(Numbers);
+    auto nums = Numbers;
+
+    for (size_t r = 1; r < nums.size(); ++r)
+    {
+        for (size_t c = 1; c <= r + 1; ++c)
+        {
+            nums[r][c] += std::max(nums[r - 1][c - 1], nums[r - 1][c]);
+        }
+    }
+
+    return *std::max_element(nums.back().begin(), nums.back().end());
 }

@@ -2,6 +2,7 @@
 #include "utils.h"
 #include "Problem001to010/problems.h"
 #include "Problem011to020/problems.h"
+#include "Problem061to070/problems.h"
 
 int main()
 {
@@ -15,6 +16,7 @@ int main()
     std::cout << std::endl;
 
     Utils::Solve<int64_t>(18, [] { return Problem18(); });
+    Utils::Solve<int64_t>(18, [] { return Problem67(); });
 
     Utils::Solve<int64_t>( 1, [] { return Problem1(); });
     Utils::Solve<int64_t>( 2, [] { return Problem2(); });
