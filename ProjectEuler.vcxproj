@@ -98,6 +98,7 @@
     <ClCompile Include="Problem011to020\problem15.cpp" />
     <ClCompile Include="Problem011to020\problem16.cpp" />
     <ClCompile Include="Problem011to020\problem17.cpp" />
+    <ClCompile Include="Problem011to020\problem18.cpp" />
     <ClCompile Include="Problem011to020\problem19.cpp" />
     <ClCompile Include="Problem011to020\problem20.cpp" />
     <ClCompile Include="stdafx.cpp">
