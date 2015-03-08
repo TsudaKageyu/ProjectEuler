@@ -101,6 +101,7 @@
     <ClCompile Include="Problem011to020\problem18.cpp" />
     <ClCompile Include="Problem011to020\problem19.cpp" />
     <ClCompile Include="Problem011to020\problem20.cpp" />
+    <ClCompile Include="Problem021to030\problem21.cpp" />
     <ClCompile Include="Problem061to070\problem67.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -111,6 +112,7 @@
   <ItemGroup>
     <ClInclude Include="Problem001to010\problems.h" />
     <ClInclude Include="Problem011to020\problems.h" />
+    <ClInclude Include="Problem021to030\problems.h" />
     <ClInclude Include="Problem061to070\problems.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="utils.h" />
