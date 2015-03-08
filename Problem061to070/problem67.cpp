@@ -109,31 +109,25 @@ namespace
 
 int64_t Problem67()
 {
-    std::array<std::array<int, 102>, 100> nums;
+    std::array<std::array<int, 100>, 100> nums;
     assert(Numbers.size() == nums.size());
 
     for (size_t r = 0; r < Numbers.size(); ++r)
     {
-        nums[r][0] = 0;
-
         const char *p = Numbers[r];
-        for (size_t c = 1; c <= r + 1; ++c)
+
+        for (size_t c = 0; c <= r; ++c)
         {
             nums[r][c] = ::strtol(p, nullptr, 10);
-
             p += 3;
         }
-
-        nums[r][r + 2] = 0;
     }
 
-    for (size_t r = 1; r < nums.size(); ++r)
+    for (int r = static_cast<int>(nums.size()) - 2; r >= 0; --r)
     {
-        for (size_t c = 1; c <= r + 1; ++c)
-        {
-            nums[r][c] += std::max(nums[r - 1][c - 1], nums[r - 1][c]);
-        }
+        for (int c = 0; c <= r; ++c)
+            nums[r][c] += std::max(nums[r + 1][c], nums[r + 1][c + 1]);
     }
 
-    return *std::max_element(nums.back().begin(), nums.back().end());
+    return nums[0][0];
 }
