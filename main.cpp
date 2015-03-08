@@ -16,7 +16,7 @@ int main()
     std::cout << std::endl;
 
     Utils::Solve<int64_t>(18, [] { return Problem18(); });
-    Utils::Solve<int64_t>(18, [] { return Problem67(); });
+    Utils::Solve<int64_t>(67, [] { return Problem67(); });
     std::cout << std::endl;
 
     Utils::Solve<int64_t>( 1, [] { return Problem1(); });
