@@ -109,6 +109,7 @@
     <ClCompile Include="Problem021to030\problem26.cpp" />
     <ClCompile Include="Problem021to030\problem27.cpp" />
     <ClCompile Include="Problem021to030\problem28.cpp" />
+    <ClCompile Include="Problem021to030\problem29.cpp" />
     <ClCompile Include="Problem061to070\problem67.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
