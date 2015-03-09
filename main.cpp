@@ -3,6 +3,7 @@
 #include "Problem001to010/problems.h"
 #include "Problem011to020/problems.h"
 #include "Problem021to030/problems.h"
+#include "Problem031to040/problems.h"
 #include "Problem061to070/problems.h"
 
 int main()
@@ -16,7 +17,7 @@ int main()
     std::cout << table.size() << " prime numbers." << std::endl;
     std::cout << std::endl;
 
-    Utils::Solve<int64_t>(30, [] { return Problem30(); });
+    Utils::Solve<int64_t>(31, [] { return Problem31(); });
     std::cout << std::endl;
 
     Utils::Solve<int64_t>( 1, [] { return Problem1(); });
@@ -50,6 +51,7 @@ int main()
     Utils::Solve<int64_t>(27, [] { return Problem27(); });
     Utils::Solve<int64_t>(28, [] { return Problem28(); });
     Utils::Solve<int64_t>(29, [] { return Problem29(); });
+    Utils::Solve<int64_t>(30, [] { return Problem30(); });
 
     Utils::Solve<int64_t>(67, [] { return Problem67(); });
 
