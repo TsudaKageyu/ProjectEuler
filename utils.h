@@ -94,6 +94,28 @@ namespace Utils
     }
 
     // -------------------------------------------------------------------------
+    // Returns the sum of all proper divisors of n.
+
+    template <typename T>
+    T GetSumOfProperDivisors(T n)
+    {
+        T sum = 1;
+
+        for (T i = 2; i < static_cast<T>(std::sqrt(n) + 1); ++i)
+        {
+            if (n % i == 0)
+            {
+                sum += i;
+
+                if (n / i != i)
+                    sum += n / i;
+            }
+        }
+
+        return sum;
+    }
+
+    // -------------------------------------------------------------------------
     // Helper class for measuring the processing time.
 
     class StopWatch
