@@ -4,7 +4,7 @@ namespace Utils
 {
     const int64_t PrimeMax  = 2000000;
 
-    const size_t TestCount = 10;
+    const size_t TestCount = 3;
 
     const size_t AnswerWidth   = 12;
     const size_t TimeWidth     = 10;
