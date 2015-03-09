@@ -12,11 +12,13 @@ int64_t Problem27()
 
     for (auto itB = primes.begin(); *itB <= 999; ++itB)
     {
-        // a shoule be some prime - b - 1. When n == 1, n * n + a * n + b == some prime.
+        // a shoule be some prime - b - 1.
+        // When n == 1, n * n + a * n + b == some prime.
+        //              a == some prime - b - 1.
 
         for (auto itA = primes.begin(); ; ++itA)
         {
-            const int a = *itA - *itB - 1;
+            const int64_t a = *itA - *itB - 1;
             if (a > 999)
                 break;
 
