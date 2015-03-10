@@ -9,6 +9,7 @@
 #include <iomanip>
 #include <iostream>
 #include <numeric>
+#include <set>
 #include <string>
 #include <vector>
 #include <boost/multiprecision/cpp_int.hpp>
