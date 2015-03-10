@@ -29,53 +29,33 @@ int64_t Problem36()
     {
         std::vector<int> digits = { n % 10, (n / 10) % 10, (n / 100) };
 
-        while (digits.back() == 0)
-            digits.pop_back();
+        const int n1 = digits[0] * 100001 + digits[1] * 10010 + digits[2] * 1100;
+        if (IsParindromicBinary(n1))
+            answer += n1;
 
-        if (digits.size() == 1)
+        const int n2 = digits[0] * 10001 + digits[1] * 1010 + digits[2] * 100;
+        if (IsParindromicBinary(n2))
+            answer += n2;
+
+        if (digits[2] == 0)
         {
-            const int n1 = digits[0] * 11;
-            if (IsParindromicBinary(n1))
-                answer += n1;
-
-            const int n2 = digits[0] * 1001;
-            if (IsParindromicBinary(n2))
-                answer += n2;
-
-            const int n3 = digits[0] * 100001;
+            const int n3 = digits[0] * 1001 + digits[1] * 110;
             if (IsParindromicBinary(n3))
                 answer += n3;
 
-            if (IsParindromicBinary(digits[0]))
-                answer += digits[0];
-        }
-        else if (digits.size() == 2)
-        {
-            const int n1 = digits[0] * 1001 + digits[1] * 110;
-            if (IsParindromicBinary(n1))
-                answer += n1;
-
-            const int n2 = digits[0] * 101 + digits[1] * 10;
-            if (IsParindromicBinary(n2))
-                answer += n2;
-
-            const int n3 = digits[0] * 100001 + digits[1] * 10010;
-            if (IsParindromicBinary(n3))
-                answer += n3;
-
-            const int n4 = digits[0] * 10001 + digits[1] * 1010;
+            const int n4 = digits[0] * 101 + digits[1] * 10;
             if (IsParindromicBinary(n4))
                 answer += n4;
-        }
-        else // if (digits.size() == 3)
-        {
-            const int n1 = digits[0] * 100001 + digits[1] * 10010 + digits[2] * 1100;
-            if (IsParindromicBinary(n1))
-                answer += n1;
 
-            const int n2 = digits[0] * 10001 + digits[1] * 1010 + digits[2] * 100;
-            if (IsParindromicBinary(n2))
-                answer += n2;
+            if (digits[1] == 0)
+            {
+                const int n5 = digits[0] * 11;
+                if (IsParindromicBinary(n5))
+                    answer += n5;
+
+                if (IsParindromicBinary(digits[0]))
+                    answer += digits[0];
+           }
         }
     }
 
