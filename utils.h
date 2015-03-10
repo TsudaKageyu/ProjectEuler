@@ -139,6 +139,39 @@ namespace Utils
     }
 
     // -------------------------------------------------------------------------
+    // Returns wheter or not n is palindromic like "123321".
+
+    template <typename T>
+    inline bool IsPalindromic(T n)
+    {
+        assert(n <= 999999);
+
+        if (n == 0)
+            return true;
+
+        const std::array<T, 6> digits = {
+            Utils::GetDigit<T, 0>(n),
+            Utils::GetDigit<T, 1>(n),
+            Utils::GetDigit<T, 2>(n),
+            Utils::GetDigit<T, 3>(n),
+            Utils::GetDigit<T, 4>(n),
+            Utils::GetDigit<T, 5>(n)
+        };
+
+        size_t size = digits.size();
+        while (digits[size - 1] == 0)
+            size--;
+
+        for (size_t i = 0; i < size / 2; ++i)
+        {
+            if (digits[i] != digits[size - i - 1])
+                return false;
+        }
+
+        return true;
+    }
+
+    // -------------------------------------------------------------------------
     // Helper class for measuring the processing time.
 
     class StopWatch
