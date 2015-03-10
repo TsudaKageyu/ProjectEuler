@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "utils.h"
 
-namespace
+namespace Utils
 {
     bool IsParindromicBinary(int n)
     {
@@ -25,15 +25,36 @@ int64_t Problem36()
 {
     int64_t answer = 0;
 
-    for (int64_t n = 1; n <= 999999; n += 2)
+    for (int i = 1; i <= 9; i += 2)
     {
-        if (!IsParindromicBinary(static_cast<int>(n)))
+        if (!Utils::IsParindromicBinary(i))
             continue;
 
-        if (!Utils::IsPalindromic(n))
+        if (!Utils::IsPalindromic(i))
             continue;
 
-        answer += n;
+        answer += i;
+    }
+
+    int d = 10;
+
+    for (int i = 0; i < 5; ++i)
+    {
+        for (int j = 1; j <= 9; j += 2)
+        {
+            for (int k = j * d + 1; k <= j * d + d - 1; k += 2)
+            {
+                if (!Utils::IsParindromicBinary(k))
+                    continue;
+
+                if (!Utils::IsPalindromic(k))
+                    continue;
+
+                answer += k;
+            }
+        }
+
+        d *= 10;
     }
 
     return answer;
