@@ -74,6 +74,29 @@ namespace Utils
     }
 
     // -------------------------------------------------------------------------
+    // Returns N ^ M.
+
+    template <typename T, T N, T M>
+    T Power()
+    {
+        T ret = 1;
+
+        for (T i = 0; i < M; ++i)
+            ret *= N;
+
+        return ret;
+    }
+
+    // -------------------------------------------------------------------------
+    // Returns D + 1 th digit of n.
+
+    template <typename T, T D>
+    T GetDigit(T n)
+    {
+        return (n / Power<T, static_cast<T>(10), D>()) % static_cast<T>(10);
+    }
+
+    // -------------------------------------------------------------------------
     // Returns the sum of all digits of n.
 
     template <typename T = int64_t, typename U>
