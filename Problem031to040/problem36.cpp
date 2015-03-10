@@ -3,7 +3,7 @@
 
 namespace
 {
-    bool IsParindromicBinary(int n)
+    bool IsParindromicBase2(int n)
     {
         const uint32_t x = static_cast<uint32_t>(n);
 
@@ -27,34 +27,36 @@ int64_t Problem36()
 
     for (int n = 1; n <= 999; n += 2)
     {
-        std::vector<int> digits = { n % 10, (n / 10) % 10, (n / 100) };
+        const int d0 = n % 10;
+        const int d1 = (n / 10) % 10;
+        const int d2 = n / 100;
 
-        const int n1 = digits[0] * 100001 + digits[1] * 10010 + digits[2] * 1100;
-        if (IsParindromicBinary(n1))
+        const int n1 = d0 * 100001 + d1 * 10010 + d2 * 1100;
+        if (IsParindromicBase2(n1))
             answer += n1;
 
-        const int n2 = digits[0] * 10001 + digits[1] * 1010 + digits[2] * 100;
-        if (IsParindromicBinary(n2))
+        const int n2 = d0 * 10001 + d1 * 1010 + d2 * 100;
+        if (IsParindromicBase2(n2))
             answer += n2;
 
-        if (digits[2] == 0)
+        if (d2 == 0)
         {
-            const int n3 = digits[0] * 1001 + digits[1] * 110;
-            if (IsParindromicBinary(n3))
+            const int n3 = d0 * 1001 + d1 * 110;
+            if (IsParindromicBase2(n3))
                 answer += n3;
 
-            const int n4 = digits[0] * 101 + digits[1] * 10;
-            if (IsParindromicBinary(n4))
+            const int n4 = d0 * 101 + d1 * 10;
+            if (IsParindromicBase2(n4))
                 answer += n4;
 
-            if (digits[1] == 0)
+            if (d1 == 0)
             {
-                const int n5 = digits[0] * 11;
-                if (IsParindromicBinary(n5))
+                const int n5 = d0 * 11;
+                if (IsParindromicBase2(n5))
                     answer += n5;
 
-                if (IsParindromicBinary(digits[0]))
-                    answer += digits[0];
+                if (IsParindromicBase2(d0))
+                    answer += d0;
            }
         }
     }
