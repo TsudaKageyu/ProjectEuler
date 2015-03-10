@@ -10,13 +10,11 @@ int64_t Problem32()
     do
     {
         const int64_t a = nums[0] * (nums[1] * 1000 + nums[2] * 100 + nums[3] * 10 + nums[4]);
-        const int64_t b = (nums[0] * 1000 + nums[1] * 100 + nums[2] * 10 + nums[3]) * nums[4];
-        const int64_t c = (nums[0] * 10 + nums[1]) * (nums[2] * 100 + nums[3] * 10 + nums[4]);
-        const int64_t d = (nums[0] * 100 + nums[1] * 10 + nums[2]) * (nums[3] * 10 + nums[4]);
-        const int64_t e = nums[5] * 1000 + nums[6] * 100 + nums[7] * 10 + nums[8];
+        const int64_t b = (nums[0] * 10 + nums[1]) * (nums[2] * 100 + nums[3] * 10 + nums[4]);
+        const int64_t c = nums[5] * 1000 + nums[6] * 100 + nums[7] * 10 + nums[8];
 
-        if (a == e || b == e || c == e || d == e)
-            products.insert(e);
+        if (a == c || b == c)
+            products.insert(c);
 
     } while (std::next_permutation(nums.begin(), nums.end()));
 
