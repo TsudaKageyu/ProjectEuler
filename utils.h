@@ -4,12 +4,6 @@ namespace Utils
 {
     const int64_t PrimeMax  = 2000000;
 
-    const size_t TestCount = 3;
-
-    const size_t AnswerWidth   = 12;
-    const size_t TimeWidth     = 10;
-    const size_t TimePrecision = 4;
-
     // -------------------------------------------------------------------------
     // Returns a list of prime numbers no more than Utils::PrimeMax.
 
@@ -192,35 +186,7 @@ namespace Utils
     // -------------------------------------------------------------------------
     // Helper function for printing the results.
 
-    template <typename T>
-    void Solve(int number, const std::function<T ()> &solver)
-    {
-        using namespace std;
-
-        cout << "Answer " << setw(2) << number << ": ";
-
-        array<T, TestCount> answers;
-
-        const StopWatch sw;
-
-        for (auto &answer : answers)
-            answer = solver();
-
-        const double time = sw.GetElapsedMilliseconds() / TestCount;
-
-        for (size_t i = 0; i < answers.size(); ++i)
-        {
-            if (answers[i] != answers[0])
-            {
-                cout << "Inconsistent!" << endl;
-                return;
-            }
-        }
-
-        cout << setw(AnswerWidth) << answers[0];
-        cout << " (" << setw(TimeWidth) << fixed << setprecision(TimePrecision) << time << " ms)";
-        cout << endl;
-    }
+    void Solve(int number, const std::function<int64_t ()> &solver);
 
     // -------------------------------------------------------------------------
     // Returns the running CPU name.

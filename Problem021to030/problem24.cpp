@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "utils.h"
 
-std::string Problem24()
+int64_t Problem24()
 {
     std::vector<char> digits = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 
@@ -20,5 +20,5 @@ std::string Problem24()
         num -= (f * d);
     }
 
-    return answer;
+    return ::atoll(answer.c_str());
 }

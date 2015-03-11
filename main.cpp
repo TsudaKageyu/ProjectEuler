@@ -17,49 +17,49 @@ int main()
     std::cout << table.size() << " prime numbers." << std::endl;
     std::cout << std::endl;
 
-    Utils::Solve<int64_t>(36, [] { return Problem36(); });
+    Utils::Solve(36, Problem36);
     std::cout << std::endl;
 
-    Utils::Solve<int64_t>( 1, [] { return Problem1(); });
-    Utils::Solve<int64_t>( 2, [] { return Problem2(); });
-    Utils::Solve<int64_t>( 3, [] { return Problem3(); });
-    Utils::Solve<int64_t>( 4, [] { return Problem4(); });
-    Utils::Solve<int64_t>( 5, [] { return Problem5(); });
-    Utils::Solve<int64_t>( 6, [] { return Problem6(); });
-    Utils::Solve<int64_t>( 7, [] { return Problem7(); });
-    Utils::Solve<int64_t>( 8, [] { return Problem8(); });
-    Utils::Solve<int64_t>( 9, [] { return Problem9(); });
-    Utils::Solve<int64_t>(10, [] { return Problem10(); });
+    Utils::Solve( 1, Problem1);
+    Utils::Solve( 2, Problem2);
+    Utils::Solve( 3, Problem3);
+    Utils::Solve( 4, Problem4);
+    Utils::Solve( 5, Problem5);
+    Utils::Solve( 6, Problem6);
+    Utils::Solve( 7, Problem7);
+    Utils::Solve( 8, Problem8);
+    Utils::Solve( 9, Problem9);
+    Utils::Solve(10, Problem10);
 
-    Utils::Solve<int64_t>(11, [] { return Problem11(); });
-    Utils::Solve<int64_t>(12, [] { return Problem12(); });
-    Utils::Solve<std::string>(13, [] { return Problem13(); });
-    Utils::Solve<int64_t>(14, [] { return Problem14(); });
-    Utils::Solve<int64_t>(15, [] { return Problem15(); });
-    Utils::Solve<int64_t>(16, [] { return Problem16(); });
-    Utils::Solve<int64_t>(17, [] { return Problem17(); });
-    Utils::Solve<int64_t>(18, [] { return Problem18(); });
-    Utils::Solve<int64_t>(19, [] { return Problem19(); });
-    Utils::Solve<int64_t>(20, [] { return Problem20(); });
+    Utils::Solve(11, Problem11);
+    Utils::Solve(12, Problem12);
+    Utils::Solve(13, Problem13);
+    Utils::Solve(14, Problem14);
+    Utils::Solve(15, Problem15);
+    Utils::Solve(16, Problem16);
+    Utils::Solve(17, Problem17);
+    Utils::Solve(18, Problem18);
+    Utils::Solve(19, Problem19);
+    Utils::Solve(20, Problem20);
 
-    Utils::Solve<int64_t>(21, [] { return Problem21(); });
-    Utils::Solve<int64_t>(22, [] { return Problem22(); });
-    Utils::Solve<int64_t>(23, [] { return Problem23(); });
-    Utils::Solve<std::string>(24, [] { return Problem24(); });
-    Utils::Solve<int64_t>(25, [] { return Problem25(); });
-    Utils::Solve<int64_t>(26, [] { return Problem26(); });
-    Utils::Solve<int64_t>(27, [] { return Problem27(); });
-    Utils::Solve<int64_t>(28, [] { return Problem28(); });
-    Utils::Solve<int64_t>(29, [] { return Problem29(); });
-    Utils::Solve<int64_t>(30, [] { return Problem30(); });
+    Utils::Solve(21, Problem21);
+    Utils::Solve(22, Problem22);
+    Utils::Solve(23, Problem23);
+    Utils::Solve(24, Problem24);
+    Utils::Solve(25, Problem25);
+    Utils::Solve(26, Problem26);
+    Utils::Solve(27, Problem27);
+    Utils::Solve(28, Problem28);
+    Utils::Solve(29, Problem29);
+    Utils::Solve(30, Problem30);
 
-    Utils::Solve<int64_t>(31, [] { return Problem31(); });
-    Utils::Solve<int64_t>(32, [] { return Problem32(); });
-    Utils::Solve<int64_t>(33, [] { return Problem33(); });
-    Utils::Solve<int64_t>(34, [] { return Problem34(); });
-    Utils::Solve<int64_t>(35, [] { return Problem35(); });
+    Utils::Solve(31, Problem31);
+    Utils::Solve(32, Problem32);
+    Utils::Solve(33, Problem33);
+    Utils::Solve(34, Problem34);
+    Utils::Solve(35, Problem35);
 
-    Utils::Solve<int64_t>(67, [] { return Problem67(); });
+    Utils::Solve(67, Problem67);
 
     return 0;
 }

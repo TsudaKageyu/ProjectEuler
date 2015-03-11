@@ -108,7 +108,7 @@ namespace
     };
 }
 
-std::string Problem13()
+int64_t Problem13()
 {
     const size_t len = ::strlen(Numbers[0]);
 
@@ -146,6 +146,7 @@ std::string Problem13()
     }
 
     const size_t pos = answer.find_first_not_of('0');
+    answer.resize(pos + 10);
 
-    return answer.substr(pos, 10);
+    return ::atoll(answer.c_str() + pos);
 }

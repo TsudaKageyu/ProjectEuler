@@ -3,6 +3,12 @@
 
 namespace
 {
+    const size_t TestCount = 3;
+
+    const size_t AnswerWidth   = 12;
+    const size_t TimeWidth     = 10;
+    const size_t TimePrecision = 4;
+
     // -------------------------------------------------------------------------
     // Helper function for initializing the prime number table.
 
@@ -47,7 +53,7 @@ namespace Utils
 {
     const std::vector<int64_t> & GetPrimeTable()
     {
-        static std::vector<int64_t> table = InitializePrimeTable(PrimeMax);
+        static const std::vector<int64_t> table = InitializePrimeTable(PrimeMax);
 
         return table;
     }
@@ -81,6 +87,35 @@ namespace Utils
         return name;
     }
 
+    void Solve(int number, const std::function<int64_t()> &solver)
+    {
+        using namespace std;
+
+        cout << "Answer " << setw(2) << number << ": ";
+
+        array<int64_t, TestCount> answers;
+
+        const StopWatch sw;
+
+        for (auto &answer : answers)
+            answer = solver();
+
+        const double time = sw.GetElapsedMilliseconds() / TestCount;
+
+        for (size_t i = 0; i < answers.size(); ++i)
+        {
+            if (answers[i] != answers[0])
+            {
+                cout << "Inconsistent!" << endl;
+                return;
+            }
+        }
+
+        cout << setw(AnswerWidth) << answers[0];
+        cout << " (" << setw(TimeWidth) << fixed << setprecision(TimePrecision) << time << " ms)";
+        cout << endl;
+    }
+
     // -------------------------------------------------------------------------
     // StopWatch class implementation.
 
@@ -99,5 +134,4 @@ namespace Utils
 
         return (end.QuadPart - start.QuadPart) * 1000.0 / freq.QuadPart;
     }
-
 }
