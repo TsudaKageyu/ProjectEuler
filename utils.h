@@ -166,24 +166,6 @@ namespace Utils
     }
 
     // -------------------------------------------------------------------------
-    // Helper class for measuring the processing time.
-
-    class StopWatch
-    {
-    private:
-        LARGE_INTEGER start;
-
-    public:
-        StopWatch();
-
-        double GetElapsedMilliseconds() const;
-
-    private:
-        StopWatch(const StopWatch &);
-        StopWatch &operator=(const StopWatch &);
-    };
-
-    // -------------------------------------------------------------------------
     // Helper function for printing the results.
 
     void Solve(int number, const std::function<int64_t ()> &solver);

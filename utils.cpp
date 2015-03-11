@@ -5,10 +5,6 @@ namespace
 {
     const size_t TestCount = 3;
 
-    const size_t AnswerWidth   = 12;
-    const size_t TimeWidth     = 10;
-    const size_t TimePrecision = 4;
-
     // -------------------------------------------------------------------------
     // Helper function for initializing the prime number table.
 
@@ -61,7 +57,7 @@ namespace Utils
     std::string GetCPUName()
     {
         std::array<int, 4> info;
-        __cpuid(info.data(), 0x80000000);
+        ::__cpuid(info.data(), 0x80000000);
 
         if (static_cast<uint32_t>(info[0]) < 0x80000004U)
             return "Unknown CPU";
@@ -69,13 +65,13 @@ namespace Utils
         std::vector<char> buf;
         buf.resize(49);
 
-        __cpuid(info.data(), 0x80000002);
+        ::__cpuid(info.data(), 0x80000002);
         ::memcpy(&buf[0], &info, sizeof(info));
 
-        __cpuid(info.data(), 0x80000003);
+        ::__cpuid(info.data(), 0x80000003);
         ::memcpy(&buf[16], &info, sizeof(info));
 
-        __cpuid(info.data(), 0x80000004);
+        ::__cpuid(info.data(), 0x80000004);
         ::memcpy(&buf[32], &info, sizeof(info));
 
         std::string name(buf.data());
@@ -95,12 +91,24 @@ namespace Utils
 
         array<int64_t, TestCount> answers;
 
-        const StopWatch sw;
+        LARGE_INTEGER s1;
+        ::QueryPerformanceCounter(&s1);
+
+        unsigned int ui;
+        const auto s2 = __rdtscp(&ui);
 
         for (auto &answer : answers)
             answer = solver();
 
-        const double time = sw.GetElapsedMilliseconds() / TestCount;
+        const auto cycles = __rdtscp(&ui) - s2;
+
+        LARGE_INTEGER e1;
+        ::QueryPerformanceCounter(&e1);
+
+        LARGE_INTEGER freq;
+        ::QueryPerformanceFrequency(&freq);
+
+        const double ms = (e1.QuadPart - s1.QuadPart) * 1000.0 / freq.QuadPart / TestCount;
 
         for (size_t i = 0; i < answers.size(); ++i)
         {
@@ -111,27 +119,9 @@ namespace Utils
             }
         }
 
-        cout << setw(AnswerWidth) << answers[0];
-        cout << " (" << setw(TimeWidth) << fixed << setprecision(TimePrecision) << time << " ms)";
+        cout << setw(12) << answers[0];
+        cout << " (" << setw(10) << fixed << setprecision(4) << ms << " ms, ";
+        cout << setw(10) << cycles << " cycles)";
         cout << endl;
-    }
-
-    // -------------------------------------------------------------------------
-    // StopWatch class implementation.
-
-    StopWatch::StopWatch()
-    {
-        ::QueryPerformanceCounter(&start);
-    }
-
-    double StopWatch::GetElapsedMilliseconds() const
-    {
-        LARGE_INTEGER end;
-        ::QueryPerformanceCounter(&end);
-
-        LARGE_INTEGER freq;
-        ::QueryPerformanceFrequency(&freq);
-
-        return (end.QuadPart - start.QuadPart) * 1000.0 / freq.QuadPart;
     }
 }
