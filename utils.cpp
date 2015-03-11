@@ -3,8 +3,6 @@
 
 namespace
 {
-    const size_t TestCount = 3;
-
     // -------------------------------------------------------------------------
     // Helper function for initializing the prime number table.
 
@@ -83,32 +81,50 @@ namespace Utils
         return name;
     }
 
+    template <typename T>
+    T GetAverage(std::vector<T> &v)
+    {
+        assert(v.size() >= 3);
+
+        v.erase(std::max_element(v.begin(), v.end()));
+        v.erase(std::min_element(v.begin(), v.end()));
+
+        auto sum = std::accumulate(v.begin(), v.end(), static_cast<T>(0));
+        return sum / v.size();
+    }
+
     void Solve(int number, const std::function<int64_t()> &solver)
     {
+        const size_t TestCount = 5;
+
         using namespace std;
 
         cout << "Answer " << setw(2) << number << ": ";
 
-        array<int64_t, TestCount> answers;
+        array<int64_t,  TestCount> answers   = {};
+        std::vector<double>   durations;
+        std::vector<uint64_t> cycles;
 
-        LARGE_INTEGER s1;
-        ::QueryPerformanceCounter(&s1);
+        for (size_t i = 0; i < TestCount; ++i)
+        {
+            LARGE_INTEGER s1;
+            ::QueryPerformanceCounter(&s1);
 
-        unsigned int ui;
-        const auto s2 = __rdtscp(&ui);
+            unsigned int ui;
+            const auto s2 = __rdtscp(&ui);
 
-        for (auto &answer : answers)
-            answer = solver();
+            answers[i] = solver();
 
-        const auto cycles = __rdtscp(&ui) - s2;
+            cycles.push_back(__rdtscp(&ui) - s2);
 
-        LARGE_INTEGER e1;
-        ::QueryPerformanceCounter(&e1);
+            LARGE_INTEGER e1;
+            ::QueryPerformanceCounter(&e1);
 
-        LARGE_INTEGER freq;
-        ::QueryPerformanceFrequency(&freq);
+            LARGE_INTEGER freq;
+            ::QueryPerformanceFrequency(&freq);
 
-        const double ms = (e1.QuadPart - s1.QuadPart) * 1000.0 / freq.QuadPart / TestCount;
+            durations.push_back((e1.QuadPart - s1.QuadPart) * 1000.0 / freq.QuadPart);
+        }
 
         for (size_t i = 0; i < answers.size(); ++i)
         {
@@ -119,9 +135,12 @@ namespace Utils
             }
         }
 
+        const auto c = GetAverage(cycles);
+        const auto d = GetAverage(durations);
+
         cout << setw(12) << answers[0];
-        cout << " (" << setw(10) << fixed << setprecision(4) << ms << " ms, ";
-        cout << setw(10) << cycles << " cycles)";
+        cout << " (" << setw(10) << fixed << setprecision(4) << d << " ms, ";
+        cout << setw(10) << c << " cycles)";
         cout << endl;
     }
 }
