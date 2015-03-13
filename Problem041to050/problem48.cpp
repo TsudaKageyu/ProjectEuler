@@ -1,18 +1,24 @@
 #include "stdafx.h"
 #include "utils.h"
 
-using boost::multiprecision::cpp_int;
-using boost::multiprecision::pow;
-
 int64_t Problem48()
 {
-    cpp_int sum(0);
+    const int64_t modulo = 10000000000;
 
-    for (uint32_t i = 1; i <= 1000; ++i)
-        sum += pow(cpp_int(i), i);
+    int64_t sum = 0;
 
-    auto s = sum.str();
-    s = s.substr(s.size() - 10);
+    for (int64_t i = 1; i <= 1000; ++i)
+    {
+        int64_t num = i;
+        for (int64_t j = 1; j < i; ++j)
+        {
+            num *= i;
+            num %= modulo;
+        }
 
-    return ::atoll(s.c_str());
+        sum += num;
+        sum %= modulo;
+    }
+
+    return sum;
 }
