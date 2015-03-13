@@ -5,7 +5,7 @@ int64_t Problem43()
 {
     int64_t answer = 0;
 
-    for (int64_t m17 = 289; m17 <= 999; m17 += 17)
+    for (int64_t m17 = 102; m17 <= 999; m17 += 17)
     {
         std::array<bool, 10> used = {};
 
@@ -35,7 +35,7 @@ int64_t Problem43()
 
             used[d7] = true;
 
-            for (int64_t d6 = 0; d6 <= 9; ++d6)
+            for (int64_t d6 = 0; d6 <= 9; d6 += 5)
             {
                 if (used[d6])
                     continue;
@@ -55,12 +55,9 @@ int64_t Problem43()
 
                     used[d5] = true;
 
-                    for (int64_t d4 = 0; d4 <= 9; ++d4)
+                    for (int64_t d4 = 0; d4 <= 9; d4 += 2)
                     {
                         if (used[d4])
-                            continue;
-
-                        if ((d4 * 100 + d5 * 10 + d6) % 5 != 0)
                             continue;
 
                         used[d4] = true;
@@ -78,9 +75,6 @@ int64_t Problem43()
                             for (int64_t d2 = 0; d2 <= 9; ++d2)
                             {
                                 if (used[d2])
-                                    continue;
-
-                                if ((d2 * 100 + d3 * 10 + d4) % 2 != 0)
                                     continue;
 
                                 used[d2] = true;
