@@ -7,6 +7,8 @@
 #include "Problem041to050/problems.h"
 #include "Problem061to070/problems.h"
 
+void OldProblems();
+
 int main()
 {
     std::cout << Utils::GetCPUName() << std::endl;
@@ -18,18 +20,36 @@ int main()
     std::cout << table.size() << " prime numbers." << std::endl;
     std::cout << std::endl;
 
-    Utils::Solve(48, Problem48);
+    Utils::Solve(49, Problem49);
     std::cout << std::endl;
 
-    Utils::Solve( 1, Problem1);
-    Utils::Solve( 2, Problem2);
-    Utils::Solve( 3, Problem3);
-    Utils::Solve( 4, Problem4);
-    Utils::Solve( 5, Problem5);
-    Utils::Solve( 6, Problem6);
-    Utils::Solve( 7, Problem7);
-    Utils::Solve( 8, Problem8);
-    Utils::Solve( 9, Problem9);
+    OldProblems();
+
+    Utils::Solve(41, Problem41);
+    Utils::Solve(42, Problem42);
+    Utils::Solve(43, Problem43);
+    Utils::Solve(44, Problem44);
+    Utils::Solve(45, Problem45);
+    Utils::Solve(46, Problem46);
+    Utils::Solve(47, Problem47);
+    Utils::Solve(48, Problem48);
+
+    Utils::Solve(67, Problem67);
+
+    return 0;
+}
+
+void OldProblems()
+{
+    Utils::Solve(1, Problem1);
+    Utils::Solve(2, Problem2);
+    Utils::Solve(3, Problem3);
+    Utils::Solve(4, Problem4);
+    Utils::Solve(5, Problem5);
+    Utils::Solve(6, Problem6);
+    Utils::Solve(7, Problem7);
+    Utils::Solve(8, Problem8);
+    Utils::Solve(9, Problem9);
     Utils::Solve(10, Problem10);
 
     Utils::Solve(11, Problem11);
@@ -64,16 +84,4 @@ int main()
     Utils::Solve(38, Problem38);
     Utils::Solve(39, Problem39);
     Utils::Solve(40, Problem40);
-
-    Utils::Solve(41, Problem41);
-    Utils::Solve(42, Problem42);
-    Utils::Solve(43, Problem43);
-    Utils::Solve(44, Problem44);
-    Utils::Solve(45, Problem45);
-    Utils::Solve(46, Problem46);
-    Utils::Solve(47, Problem47);
-
-    Utils::Solve(67, Problem67);
-
-    return 0;
 }
