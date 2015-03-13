@@ -8,4 +8,5 @@ int64_t Problem35();
 int64_t Problem36();
 int64_t Problem37();
 int64_t Problem38();
+int64_t Problem39();
 int64_t Problem40();
