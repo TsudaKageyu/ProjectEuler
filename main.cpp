@@ -20,7 +20,7 @@ int main()
     std::cout << table.size() << " prime numbers." << std::endl;
     std::cout << std::endl;
 
-    Utils::Solve(49, Problem49);
+    Utils::Solve(50, Problem50);
     std::cout << std::endl;
 
     OldProblems();
@@ -33,6 +33,7 @@ int main()
     Utils::Solve(46, Problem46);
     Utils::Solve(47, Problem47);
     Utils::Solve(48, Problem48);
+    Utils::Solve(49, Problem49);
 
     Utils::Solve(67, Problem67);
 

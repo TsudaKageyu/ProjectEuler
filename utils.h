@@ -2,7 +2,7 @@
 
 namespace Utils
 {
-    const int64_t PrimeMax  = 10000000;
+    const int64_t PrimeMax = 10000000;
 
     // -------------------------------------------------------------------------
     // Returns a list of prime numbers no more than Utils::PrimeMax.

@@ -44,13 +44,12 @@ int64_t Problem49()
 
         std::sort(buf.begin(), buf.end());
 
-        for (size_t i = 0; i < buf.size() - 2; ++i)
+        for (size_t i = 0; i < buf.size() - 1; ++i)
         {
-            for (size_t j = i + 1; j < buf.size() - 1; ++j)
+            for (size_t j = i + 1; j < buf.size(); ++j)
             {
                 const int64_t next = buf[j] + (buf[j] - buf[i]);
-
-                const auto it2 = std::find(buf.begin() + j + 1, buf.end(), next);
+                const auto it2 = std::find(buf.begin() + j, buf.end(), next);
                 if (it2 != buf.end())
                 {
                     char str[13];
