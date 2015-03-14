@@ -9,8 +9,22 @@
 
 void OldProblems();
 
-int main()
+int wmain(int argc, wchar_t **argv)
 {
+    enum ExecMode
+    {
+        All,
+        Latest,
+    };
+
+    ExecMode mode = ExecMode::All;
+
+    if (argc >= 2)
+    {
+        if (::_wcsicmp(argv[1], L"latest") == 0)
+            mode = ExecMode::Latest;
+    }
+
     std::cout << Utils::GetCPUName() << std::endl;
     std::cout << std::endl;
 
@@ -22,6 +36,9 @@ int main()
 
     Utils::Solve(50, Problem50);
     std::cout << std::endl;
+
+    if (mode == Latest)
+        return 0;
 
     OldProblems();
 
