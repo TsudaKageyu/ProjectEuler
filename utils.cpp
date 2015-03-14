@@ -140,7 +140,7 @@ namespace Utils
 
         cout << setw(12) << answers[0];
         cout << " (" << setw(10) << fixed << setprecision(4) << d << " ms, ";
-        cout << setw(10) << c << " cycles)";
+        cout << setw(12) << c << " cycles)";
         cout << endl;
     }
 }
