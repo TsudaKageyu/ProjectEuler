@@ -5,6 +5,7 @@
 #include "Problem021to030/problems.h"
 #include "Problem031to040/problems.h"
 #include "Problem041to050/problems.h"
+#include "Problem051to060/problems.h"
 #include "Problem061to070/problems.h"
 
 void OldProblems();
@@ -34,7 +35,7 @@ int wmain(int argc, wchar_t **argv)
     std::cout << table.size() << " prime numbers." << std::endl;
     std::cout << std::endl;
 
-    Utils::Solve(50, Problem50);
+    Utils::Solve(51, Problem51);
     std::cout << std::endl;
 
     if (mode == Latest)
@@ -51,6 +52,7 @@ int wmain(int argc, wchar_t **argv)
     Utils::Solve(47, Problem47);
     Utils::Solve(48, Problem48);
     Utils::Solve(49, Problem49);
+    Utils::Solve(50, Problem50);
 
     Utils::Solve(67, Problem67);
 
