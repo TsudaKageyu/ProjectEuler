@@ -95,52 +95,31 @@ namespace Utils
 
     void Solve(int number, const std::function<int64_t()> &solver)
     {
-        const size_t TestCount = 5;
-
         using namespace std;
 
         cout << "Answer " << setw(2) << number << ": ";
 
-        array<int64_t,  TestCount> answers   = {};
-        std::vector<double>   durations;
-        std::vector<uint64_t> cycles;
+        LARGE_INTEGER s1;
+        ::QueryPerformanceCounter(&s1);
 
-        for (size_t i = 0; i < TestCount; ++i)
-        {
-            LARGE_INTEGER s1;
-            ::QueryPerformanceCounter(&s1);
+        unsigned int ui;
+        const auto s2 = ::__rdtscp(&ui);
 
-            unsigned int ui;
-            const auto s2 = __rdtscp(&ui);
+        const int64_t answer = solver();
 
-            answers[i] = solver();
+        const uint64_t cycle = ::__rdtscp(&ui) - s2;
 
-            cycles.push_back(__rdtscp(&ui) - s2);
+        LARGE_INTEGER e1;
+        ::QueryPerformanceCounter(&e1);
 
-            LARGE_INTEGER e1;
-            ::QueryPerformanceCounter(&e1);
+        LARGE_INTEGER freq;
+        ::QueryPerformanceFrequency(&freq);
 
-            LARGE_INTEGER freq;
-            ::QueryPerformanceFrequency(&freq);
+        const double duration = (e1.QuadPart - s1.QuadPart) * 1000.0 / freq.QuadPart;
 
-            durations.push_back((e1.QuadPart - s1.QuadPart) * 1000.0 / freq.QuadPart);
-        }
-
-        for (size_t i = 0; i < answers.size(); ++i)
-        {
-            if (answers[i] != answers[0])
-            {
-                cout << "Inconsistent!" << endl;
-                return;
-            }
-        }
-
-        const auto c = GetAverage(cycles);
-        const auto d = GetAverage(durations);
-
-        cout << setw(12) << answers[0];
-        cout << " (" << setw(10) << fixed << setprecision(4) << d << " ms, ";
-        cout << setw(12) << c << " cycles)";
+        cout << setw(12) << answer;
+        cout << " (" << setw(10) << fixed << setprecision(4) << duration << " ms, ";
+        cout << setw(12) << cycle << " cycles)";
         cout << endl;
     }
 }
