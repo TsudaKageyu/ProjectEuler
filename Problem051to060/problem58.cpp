@@ -1,25 +1,14 @@
 #include "stdafx.h"
 #include "utils.h"
 
-namespace
-{
-    bool IsPrime(int64_t n)
-    {
-        for (int64_t i = 3; i < std::sqrt(n) + 1; ++i)
-        {
-            if (n % i == 0)
-                return false;
-        }
-
-        return true;
-    }
-}
-
 int64_t Problem58()
 {
+    using boost::multiprecision::cpp_int;
+    using boost::multiprecision::miller_rabin_test;
+
     int64_t answer = 0;
 
-    int64_t num        = 1;
+    cpp_int num        = 1;
     int64_t numCount   = 1;
     int64_t primeCount = 0;
 
@@ -29,7 +18,7 @@ int64_t Problem58()
         {
             num += i * 2;
 
-            if (IsPrime(num))
+            if (miller_rabin_test(num, 10))
                 primeCount++;
         }
 
