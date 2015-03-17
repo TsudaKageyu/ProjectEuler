@@ -35,7 +35,7 @@ int wmain(int argc, wchar_t **argv)
     std::cout << table.size() << " prime numbers." << std::endl;
     std::cout << std::endl;
 
-    Utils::Solve(57, Problem57);
+    Utils::Solve(58, Problem58);
     std::cout << std::endl;
 
     if (mode == Latest)
@@ -60,6 +60,7 @@ int wmain(int argc, wchar_t **argv)
     Utils::Solve(54, Problem54);
     Utils::Solve(55, Problem55);
     Utils::Solve(56, Problem56);
+    Utils::Solve(57, Problem57);
     Utils::Solve(59, Problem59);
 
     Utils::Solve(67, Problem67);
