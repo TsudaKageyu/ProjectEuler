@@ -8,7 +8,7 @@ namespace
         int32_t count  = 0;
         int64_t number = 0;
 
-        void Set(int64_t n)
+        void Add(int64_t n)
         {
             if (count == 0)
                 number = n;
@@ -17,7 +17,7 @@ namespace
         }
     };
 
-    int64_t GetHash(int64_t x)
+    int64_t GetKey(int64_t x)
     {
         int64_t key = 0;
 
@@ -40,7 +40,7 @@ int64_t Problem62()
     dic.reserve(Limit);
 
     for (int64_t i = 1; i <= Limit; ++i)
-        dic[GetHash(i * i * i)].Set(i * i * i);
+        dic[GetKey(i * i * i)].Add(i * i * i);
 
     int64_t answer = std::numeric_limits<int64_t>::max();
 
