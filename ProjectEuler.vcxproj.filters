@@ -28,6 +28,9 @@
     <Filter Include="Problem051to060">
       <UniqueIdentifier>{1bf1bc70-7902-4de7-8a65-d92e55fc3075}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Problem091to100">
+      <UniqueIdentifier>{78eb5ed9-05f5-4dfb-995c-a60c6e389a2b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Problem001to010\problems.h">
@@ -56,6 +59,9 @@
     </ClInclude>
     <ClInclude Include="Problem051to060\problems.h">
       <Filter>Problem051to060</Filter>
+    </ClInclude>
+    <ClInclude Include="Problem091to100\problems.h">
+      <Filter>Problem091to100</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -259,6 +265,9 @@
     </ClCompile>
     <ClCompile Include="Problem061to070\problem63.cpp">
       <Filter>Problem061to070</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem091to100\problem97.cpp">
+      <Filter>Problem091to100</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
