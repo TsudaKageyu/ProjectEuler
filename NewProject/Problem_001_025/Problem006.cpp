@@ -1,13 +1,8 @@
 #include <cassert>
 #include <cstdint>
-#include <algorithm>
-#include <numeric>
-#include <vector>
 
 int64_t Problem6()
 {
-    using namespace std;
-
     const int64_t Limit = 100;
 
     int64_t sqrOfSum = (1 + Limit) * Limit / 2;

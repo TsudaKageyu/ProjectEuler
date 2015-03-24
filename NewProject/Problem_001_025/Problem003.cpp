@@ -3,8 +3,6 @@
 
 int64_t Problem3()
 {
-    using namespace std;
-
     const int64_t N  = 600851475143;
 
     // Skip the factor 2 because N is obviously a odd number.

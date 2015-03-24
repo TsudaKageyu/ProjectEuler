@@ -19,6 +19,9 @@
     <ClCompile Include="Problem_001_025\Problem005.cpp" />
     <ClCompile Include="Problem_001_025\Problem006.cpp" />
     <ClCompile Include="Problem_001_025\Problem007.cpp" />
+    <ClCompile Include="Problem_001_025\Problem008.cpp" />
+    <ClCompile Include="Problem_001_025\Problem009.cpp" />
+    <ClCompile Include="Problem_001_025\Problem010.cpp" />
     <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>

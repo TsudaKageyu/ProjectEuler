@@ -1,8 +1,6 @@
 #include <cassert>
 #include <cstdint>
-#include <algorithm>
-#include <numeric>
-#include <vector>
+#include <utility>
 
 namespace
 {
@@ -27,8 +25,6 @@ namespace
 
 int64_t Problem5()
 {
-    using namespace std;
-
     const int64_t Limit = 20;
 
     int64_t answer = 1;

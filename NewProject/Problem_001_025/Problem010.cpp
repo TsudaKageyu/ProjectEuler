@@ -1,19 +1,18 @@
 #include <cassert>
 #include <cstdint>
 #include <algorithm>
-#include <numeric>
 #include <vector>
 
-int64_t Problem7()
+int64_t Problem10()
 {
     using namespace std;
 
-    const int64_t N = 10001;
+    const int64_t N = 2000000;
 
     // Roughly estimate the limit of the search.
 
     int64_t l;
-    for (l = N * 2; ; l *= 2)
+    for (l = N * 2;; l *= 2)
     {
         const double x = static_cast<double>(l);
         if (x / log(x) > N)
@@ -39,17 +38,16 @@ int64_t Problem7()
 
     assert(*max_element(sieve.begin(), sieve.end()) >= N);
 
-    // Find the 10001st one.
+    // Add up the primes.
 
-    int64_t n = 0;
-    for (const auto p : sieve)
+    int64_t answer = 0;
+    for (const auto prime : sieve)
     {
-        if (p != 0)
-            n++;
+        if (prime >= N)
+            break;
 
-        if (n == N)
-            return p;
+        answer += prime;
     }
 
-    return 0;
+    return answer;
 }

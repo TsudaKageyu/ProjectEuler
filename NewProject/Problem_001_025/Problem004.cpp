@@ -16,17 +16,15 @@ namespace
              n / 100000
         };
 
-        if (d[5] == 0)
-            return (d[0] == d[4] && d[1] == d[3]);
-        else
+        if (d[5] != 0)
             return (d[0] == d[5] && d[1] == d[4] && d[2] == d[3]);
+        else
+            return (d[0] == d[4] && d[1] == d[3]);
     }
 }
 
 int64_t Problem4()
 {
-    using namespace std;
-
     assert(IsParindrome(54345));
 
     int32_t answer = 0;

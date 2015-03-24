@@ -7,19 +7,19 @@ int64_t Problem2()
 
     const int32_t Limit = 4000000;
 
-    array<int32_t, 2> nums = { 1, 1 };
+    array<int32_t, 2> seq = { 1, 1 }; // Last 2 terms of the sequence.
     int64_t answer = 0;
 
     while(true)
     {
-        if (nums[1] >= Limit)
+        if (seq[1] >= Limit)
             break;
 
-        if (nums[1] & 1)
-            answer += nums[1];
+        if (seq[1] & 1)
+            answer += seq[1];
 
-        nums[0] += nums[1];
-        swap(nums[0], nums[1]);
+        seq[0] += seq[1];
+        swap(seq[0], seq[1]);
     }
 
     return answer;
