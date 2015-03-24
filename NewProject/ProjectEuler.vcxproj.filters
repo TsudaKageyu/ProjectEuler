@@ -38,6 +38,21 @@
     <ClCompile Include="Problem_001_025\Problem010.cpp">
       <Filter>Problem_001_025</Filter>
     </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem011.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem012.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem013.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem014.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem015.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utils.h" />
