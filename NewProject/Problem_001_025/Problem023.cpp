@@ -1,5 +1,6 @@
 #include <cassert>
 #include <cstdint>
+#include <vector>
 #include <intrin.h>
 
 namespace
@@ -34,5 +35,34 @@ namespace
 
 int64_t Problem23()
 {
-    return 0;
+    const int64_t Limit = 28123;
+
+    std::vector<int32_t> abundantNums;
+    abundantNums.reserve(Limit);
+
+    for (int32_t i = 1; i <= Limit; ++i)
+    {
+        if (GetSumOfProperDivisors(i) > i)
+            abundantNums.push_back(i);
+    }
+
+    std::vector<bool> isAbundantSum(Limit * 2 + 1);
+
+    for (size_t i = 0; i < abundantNums.size(); ++i)
+    {
+        for (size_t j = i; j < abundantNums.size(); ++j)
+        {
+            isAbundantSum[abundantNums[i] + abundantNums[j]] = true;
+        }
+    }
+
+    int64_t answer = 0;
+
+    for (int64_t i = 0; i <= Limit; ++i)
+    {
+        if (!isAbundantSum[i])
+            answer += i;
+    }
+
+    return answer;
 }
