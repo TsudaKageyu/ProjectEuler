@@ -98,6 +98,15 @@
     <ClCompile Include="Problem_026_050\Problem029.cpp">
       <Filter>Problem_026_050</Filter>
     </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem030.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem031.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem032.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utils.h" />

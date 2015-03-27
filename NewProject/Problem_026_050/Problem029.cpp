@@ -1,14 +1,21 @@
 #include <cstdint>
-#include <algorithm>
+#include <set>
+#include <boost/multiprecision/cpp_int.hpp>
 
 using namespace std;
+using namespace boost::multiprecision;
 
 int64_t Problem29()
 {
-    int32_t answer = 1;
+    set<cpp_int> powers;
 
-    for (int32_t n = 1; n <= 500; ++n)
-        answer += (16 * n * n + 4 * n + 4);
+    for (cpp_int b = 2; b <= 100; ++b)
+    {
+        for (uint32_t e = 2; e <= 100; ++e)
+        {
+            powers.insert(pow(b, e));
+        }
+    }
 
-    return answer;
+    return powers.size();
 }
