@@ -2,12 +2,12 @@
 #include <cstdint>
 #include <utility>
 
+using namespace std;
+
 namespace
 {
     int64_t gcd(int64_t a, int64_t b)
     {
-        using namespace std;
-
         while (a % b != 0)
         {
             a = a % b;

@@ -107,6 +107,24 @@
     <ClCompile Include="Problem_026_050\Problem032.cpp">
       <Filter>Problem_026_050</Filter>
     </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem033.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem034.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem035.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem036.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem037.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem038.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utils.h" />
