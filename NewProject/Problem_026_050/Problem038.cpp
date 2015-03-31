@@ -1,8 +1,4 @@
 #include <cstdint>
-#include <cstring>
-#include <array>
-
-using namespace std;
 
 int64_t Problem38()
 {
