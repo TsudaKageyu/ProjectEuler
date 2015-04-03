@@ -27,7 +27,7 @@ int64_t Problem10()
     for (int32_t i = 3; i <= l; i += 2)
         sieve[i] = i;
 
-    for (int32_t i = 3; i < static_cast<int32_t>(ceil(sqrt(l))); ++i)
+    for (int32_t i = 3; i * i <= l; ++i)
     {
         if (sieve[i] == 0)
             continue;
