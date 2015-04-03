@@ -10,6 +10,7 @@ namespace
         int32_t t = x;
         int32_t m = 0;
         int32_t u = 0;
+
         while (t != 0)
         {
             u |= 1 << (t % 10);
