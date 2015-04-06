@@ -134,6 +134,18 @@
     <ClCompile Include="Problem_026_050\Problem041.cpp">
       <Filter>Problem_026_050</Filter>
     </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem042.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem043.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem044.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem045.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utils.h" />

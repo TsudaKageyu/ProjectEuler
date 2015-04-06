@@ -53,6 +53,10 @@
     <ClCompile Include="Problem_026_050\Problem039.cpp" />
     <ClCompile Include="Problem_026_050\Problem040.cpp" />
     <ClCompile Include="Problem_026_050\Problem041.cpp" />
+    <ClCompile Include="Problem_026_050\Problem042.cpp" />
+    <ClCompile Include="Problem_026_050\Problem043.cpp" />
+    <ClCompile Include="Problem_026_050\Problem044.cpp" />
+    <ClCompile Include="Problem_026_050\Problem045.cpp" />
     <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
