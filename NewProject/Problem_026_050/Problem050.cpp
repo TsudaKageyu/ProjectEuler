@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 int64_t Problem50()
 {
     vector<int32_t> sieve(1000000);

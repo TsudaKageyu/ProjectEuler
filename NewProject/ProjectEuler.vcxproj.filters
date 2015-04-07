@@ -7,6 +7,9 @@
     <Filter Include="Problem_026_050">
       <UniqueIdentifier>{78e86a92-9e17-482c-b505-ea64e7251350}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Problem_051_075">
+      <UniqueIdentifier>{8ad5fe18-e6d3-44d9-ae81-8577fad6491b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Problem_001_025\Problem001.cpp">
@@ -160,6 +163,21 @@
     </ClCompile>
     <ClCompile Include="Problem_026_050\Problem050.cpp">
       <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem051.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem052.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem053.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem054.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem055.cpp">
+      <Filter>Problem_051_075</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
