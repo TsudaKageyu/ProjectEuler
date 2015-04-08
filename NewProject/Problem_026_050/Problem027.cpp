@@ -14,7 +14,7 @@ namespace
         else if ((x & 1) == 0)
             return false;
 
-        for (int32_t p = 3; p * p < x; p += 2)
+        for (int32_t p = 3; p * p <= x; p += 2)
         {
             if (x % p == 0)
                 return false;

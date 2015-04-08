@@ -21,22 +21,25 @@ namespace
     }
 }
 
-int64_t Problem46()
+int64_t Problem58()
 {
-    for (int32_t n = 35; ; n += 2)
-    {
-        if (IsPrime(n))
-            continue;
+    int32_t n = 1;
+    int32_t c = 1;
+    int32_t p = 0;
 
-        for (int32_t m = 1; m * m < n / 2; ++m)
+    for (int32_t i = 1; ; ++i)
+    {
+        for (int32_t j = 0; j < 4; ++j)
         {
-            if (IsPrime(n - m * m * 2))
-                goto NEXT;
+            n += i * 2;
+
+            if (IsPrime(n))
+                p++;
         }
 
-        return n;
+        c += 4;
 
-    NEXT:
-        ;
+        if (c > p * 10)
+            return (i * 2 + 1);
     }
 }

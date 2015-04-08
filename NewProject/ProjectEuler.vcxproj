@@ -67,6 +67,10 @@
     <ClCompile Include="Problem_051_075\Problem053.cpp" />
     <ClCompile Include="Problem_051_075\Problem054.cpp" />
     <ClCompile Include="Problem_051_075\Problem055.cpp" />
+    <ClCompile Include="Problem_051_075\Problem056.cpp" />
+    <ClCompile Include="Problem_051_075\Problem057.cpp" />
+    <ClCompile Include="Problem_051_075\Problem058.cpp" />
+    <ClCompile Include="Problem_051_075\Problem059.cpp" />
     <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
