@@ -1,6 +1,7 @@
 #include <cstdint>
-#include <cstring>
 #include <algorithm>
+
+using namespace std;
 
 namespace
 {
@@ -35,7 +36,7 @@ int64_t Problem18()
     {
         for (int32_t x = 0; x <= y; ++x)
         {
-            nums[y][x] += std::max(nums[y + 1][x], nums[y + 1][x + 1]);
+            nums[y][x] += max(nums[y + 1][x], nums[y + 1][x + 1]);
         }
     }
 

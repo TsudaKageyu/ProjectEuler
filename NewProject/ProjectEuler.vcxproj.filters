@@ -10,6 +10,9 @@
     <Filter Include="Problem_051_075">
       <UniqueIdentifier>{8ad5fe18-e6d3-44d9-ae81-8577fad6491b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Problem_076_100">
+      <UniqueIdentifier>{4d8fb5a8-ab11-4aa1-bd48-daec28d0bd5a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Problem_001_025\Problem001.cpp">
@@ -190,6 +193,27 @@
     </ClCompile>
     <ClCompile Include="Problem_051_075\Problem059.cpp">
       <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem060.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem061.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem062.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem063.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem067.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_076_100\Problem092.cpp">
+      <Filter>Problem_076_100</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_076_100\Problem097.cpp">
+      <Filter>Problem_076_100</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
