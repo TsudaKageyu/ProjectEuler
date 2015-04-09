@@ -10,8 +10,81 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Problem_001_025\Problem001.cpp" />
+    <ClCompile Include="Problem_001_025\Problem002.cpp" />
+    <ClCompile Include="Problem_001_025\Problem003.cpp" />
+    <ClCompile Include="Problem_001_025\Problem004.cpp" />
+    <ClCompile Include="Problem_001_025\Problem005.cpp" />
+    <ClCompile Include="Problem_001_025\Problem006.cpp" />
+    <ClCompile Include="Problem_001_025\Problem007.cpp" />
+    <ClCompile Include="Problem_001_025\Problem008.cpp" />
+    <ClCompile Include="Problem_001_025\Problem009.cpp" />
+    <ClCompile Include="Problem_001_025\Problem010.cpp" />
+    <ClCompile Include="Problem_001_025\Problem011.cpp" />
+    <ClCompile Include="Problem_001_025\Problem012.cpp" />
+    <ClCompile Include="Problem_001_025\Problem013.cpp" />
+    <ClCompile Include="Problem_001_025\Problem014.cpp" />
+    <ClCompile Include="Problem_001_025\Problem015.cpp" />
+    <ClCompile Include="Problem_001_025\Problem016.cpp" />
+    <ClCompile Include="Problem_001_025\Problem017.cpp" />
+    <ClCompile Include="Problem_001_025\Problem018.cpp" />
+    <ClCompile Include="Problem_001_025\Problem019.cpp" />
+    <ClCompile Include="Problem_001_025\Problem020.cpp" />
+    <ClCompile Include="Problem_001_025\Problem021.cpp" />
+    <ClCompile Include="Problem_001_025\Problem022.cpp" />
+    <ClCompile Include="Problem_001_025\Problem023.cpp" />
+    <ClCompile Include="Problem_001_025\Problem024.cpp" />
+    <ClCompile Include="Problem_001_025\Problem025.cpp" />
+    <ClCompile Include="Problem_026_050\Problem026.cpp" />
+    <ClCompile Include="Problem_026_050\Problem027.cpp" />
+    <ClCompile Include="Problem_026_050\Problem028.cpp" />
+    <ClCompile Include="Problem_026_050\Problem029.cpp" />
+    <ClCompile Include="Problem_026_050\Problem030.cpp" />
+    <ClCompile Include="Problem_026_050\Problem031.cpp" />
+    <ClCompile Include="Problem_026_050\Problem032.cpp" />
+    <ClCompile Include="Problem_026_050\Problem033.cpp" />
+    <ClCompile Include="Problem_026_050\Problem034.cpp" />
+    <ClCompile Include="Problem_026_050\Problem035.cpp" />
+    <ClCompile Include="Problem_026_050\Problem036.cpp" />
+    <ClCompile Include="Problem_026_050\Problem037.cpp" />
+    <ClCompile Include="Problem_026_050\Problem038.cpp" />
+    <ClCompile Include="Problem_026_050\Problem039.cpp" />
+    <ClCompile Include="Problem_026_050\Problem040.cpp" />
+    <ClCompile Include="Problem_026_050\Problem041.cpp" />
+    <ClCompile Include="Problem_026_050\Problem042.cpp" />
+    <ClCompile Include="Problem_026_050\Problem043.cpp" />
+    <ClCompile Include="Problem_026_050\Problem044.cpp" />
+    <ClCompile Include="Problem_026_050\Problem045.cpp" />
+    <ClCompile Include="Problem_026_050\Problem046.cpp" />
+    <ClCompile Include="Problem_026_050\Problem047.cpp" />
+    <ClCompile Include="Problem_026_050\Problem048.cpp" />
+    <ClCompile Include="Problem_026_050\Problem049.cpp" />
+    <ClCompile Include="Problem_026_050\Problem050.cpp" />
+    <ClCompile Include="Problem_051_075\Problem051.cpp" />
+    <ClCompile Include="Problem_051_075\Problem052.cpp" />
+    <ClCompile Include="Problem_051_075\Problem053.cpp" />
+    <ClCompile Include="Problem_051_075\Problem054.cpp" />
+    <ClCompile Include="Problem_051_075\Problem055.cpp" />
+    <ClCompile Include="Problem_051_075\Problem056.cpp" />
+    <ClCompile Include="Problem_051_075\Problem057.cpp" />
+    <ClCompile Include="Problem_051_075\Problem058.cpp" />
+    <ClCompile Include="Problem_051_075\Problem059.cpp" />
+    <ClCompile Include="Problem_051_075\Problem060.cpp" />
+    <ClCompile Include="Problem_051_075\Problem061.cpp" />
+    <ClCompile Include="Problem_051_075\Problem062.cpp" />
+    <ClCompile Include="Problem_051_075\Problem063.cpp" />
+    <ClCompile Include="Problem_051_075\Problem067.cpp" />
+    <ClCompile Include="Problem_076_100\Problem092.cpp" />
+    <ClCompile Include="Problem_076_100\Problem097.cpp" />
+    <ClCompile Include="utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utils.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C12D9392-328D-48F5-8CCC-4C6FD42F1BB8}</ProjectGuid>
+    <ProjectGuid>{FCF051AF-37CD-41D7-BF07-B703729B876C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ProjectEuler</RootNamespace>
   </PropertyGroup>
@@ -47,13 +120,11 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)</AdditionalIncludeDirectories>
-      <AssemblerOutput>All</AssemblerOutput>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -63,13 +134,12 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)</AdditionalIncludeDirectories>
       <AssemblerOutput>All</AssemblerOutput>
     </ClCompile>
     <Link>
@@ -79,93 +149,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Problem001to010\problem1.cpp" />
-    <ClCompile Include="Problem001to010\problem10.cpp" />
-    <ClCompile Include="Problem001to010\problem2.cpp" />
-    <ClCompile Include="Problem001to010\problem3.cpp" />
-    <ClCompile Include="Problem001to010\problem4.cpp" />
-    <ClCompile Include="Problem001to010\problem5.cpp" />
-    <ClCompile Include="Problem001to010\problem6.cpp" />
-    <ClCompile Include="Problem001to010\problem7.cpp" />
-    <ClCompile Include="Problem001to010\problem8.cpp" />
-    <ClCompile Include="Problem001to010\problem9.cpp" />
-    <ClCompile Include="Problem011to020\problem11.cpp" />
-    <ClCompile Include="Problem011to020\problem12.cpp" />
-    <ClCompile Include="Problem011to020\problem13.cpp" />
-    <ClCompile Include="Problem011to020\problem14.cpp" />
-    <ClCompile Include="Problem011to020\problem15.cpp" />
-    <ClCompile Include="Problem011to020\problem16.cpp" />
-    <ClCompile Include="Problem011to020\problem17.cpp" />
-    <ClCompile Include="Problem011to020\problem18.cpp" />
-    <ClCompile Include="Problem011to020\problem19.cpp" />
-    <ClCompile Include="Problem011to020\problem20.cpp" />
-    <ClCompile Include="Problem021to030\problem21.cpp" />
-    <ClCompile Include="Problem021to030\problem22.cpp" />
-    <ClCompile Include="Problem021to030\problem23.cpp" />
-    <ClCompile Include="Problem021to030\problem24.cpp" />
-    <ClCompile Include="Problem021to030\problem25.cpp" />
-    <ClCompile Include="Problem021to030\problem26.cpp" />
-    <ClCompile Include="Problem021to030\problem27.cpp" />
-    <ClCompile Include="Problem021to030\problem28.cpp" />
-    <ClCompile Include="Problem021to030\problem29.cpp" />
-    <ClCompile Include="Problem021to030\problem30.cpp" />
-    <ClCompile Include="Problem031to040\problem31.cpp" />
-    <ClCompile Include="Problem031to040\problem32.cpp" />
-    <ClCompile Include="Problem031to040\problem33.cpp" />
-    <ClCompile Include="Problem031to040\problem34.cpp" />
-    <ClCompile Include="Problem031to040\problem35.cpp" />
-    <ClCompile Include="Problem031to040\problem36.cpp" />
-    <ClCompile Include="Problem031to040\problem37.cpp" />
-    <ClCompile Include="Problem031to040\problem38.cpp" />
-    <ClCompile Include="Problem031to040\problem39.cpp" />
-    <ClCompile Include="Problem031to040\problem40.cpp" />
-    <ClCompile Include="Problem041to050\problem41.cpp" />
-    <ClCompile Include="Problem041to050\problem42.cpp" />
-    <ClCompile Include="Problem041to050\problem43.cpp" />
-    <ClCompile Include="Problem041to050\problem44.cpp" />
-    <ClCompile Include="Problem041to050\problem45.cpp" />
-    <ClCompile Include="Problem041to050\problem46.cpp" />
-    <ClCompile Include="Problem041to050\problem47.cpp" />
-    <ClCompile Include="Problem041to050\problem48.cpp" />
-    <ClCompile Include="Problem041to050\problem49.cpp" />
-    <ClCompile Include="Problem041to050\problem50.cpp" />
-    <ClCompile Include="Problem051to060\problem51.cpp" />
-    <ClCompile Include="Problem051to060\problem52.cpp" />
-    <ClCompile Include="Problem051to060\problem53.cpp" />
-    <ClCompile Include="Problem051to060\problem54.cpp" />
-    <ClCompile Include="Problem051to060\problem55.cpp" />
-    <ClCompile Include="Problem051to060\problem56.cpp" />
-    <ClCompile Include="Problem051to060\problem57.cpp" />
-    <ClCompile Include="Problem051to060\problem58.cpp" />
-    <ClCompile Include="Problem051to060\problem59.cpp" />
-    <ClCompile Include="Problem051to060\problem60.cpp" />
-    <ClCompile Include="Problem061to070\problem61.cpp" />
-    <ClCompile Include="Problem061to070\problem62.cpp" />
-    <ClCompile Include="Problem061to070\problem63.cpp" />
-    <ClCompile Include="Problem061to070\problem67.cpp" />
-    <ClCompile Include="Problem061to070\problem68.cpp" />
-    <ClCompile Include="Problem091to100\problem92.cpp" />
-    <ClCompile Include="Problem091to100\problem97.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="utils.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Problem001to010\problems.h" />
-    <ClInclude Include="Problem011to020\problems.h" />
-    <ClInclude Include="Problem021to030\problems.h" />
-    <ClInclude Include="Problem031to040\problems.h" />
-    <ClInclude Include="Problem041to050\problems.h" />
-    <ClInclude Include="Problem051to060\problems.h" />
-    <ClInclude Include="Problem061to070\problems.h" />
-    <ClInclude Include="Problem091to100\problems.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="utils.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,279 +1,222 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{3bd07ad5-51e5-4710-8dc0-56bc617ea971}</UniqueIdentifier>
+    <Filter Include="Problem_001_025">
+      <UniqueIdentifier>{2e74f0a3-0cce-4ce8-ae94-858e0e17c9f2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{58c76ee7-3b7a-4b12-8fc2-888238be821c}</UniqueIdentifier>
+    <Filter Include="Problem_026_050">
+      <UniqueIdentifier>{78e86a92-9e17-482c-b505-ea64e7251350}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Problem001to010">
-      <UniqueIdentifier>{ffbbb771-7b66-4d99-a894-aca5eee710cc}</UniqueIdentifier>
+    <Filter Include="Problem_051_075">
+      <UniqueIdentifier>{8ad5fe18-e6d3-44d9-ae81-8577fad6491b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Problem011to020">
-      <UniqueIdentifier>{f2a5595d-6b5e-498a-a92c-7db9dbca3a59}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Problem061to070">
-      <UniqueIdentifier>{bafe5f40-1186-4b43-8cfd-aacb88e90497}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Problem021to030">
-      <UniqueIdentifier>{0a94d74c-c914-4cdf-8665-b23db51c291d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Problem031to040">
-      <UniqueIdentifier>{7775d94b-099d-405f-a350-348f7babe7ec}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Problem041to050">
-      <UniqueIdentifier>{69d7d5a8-377d-4a93-89cf-4d5b6987771c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Problem051to060">
-      <UniqueIdentifier>{1bf1bc70-7902-4de7-8a65-d92e55fc3075}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Problem091to100">
-      <UniqueIdentifier>{78eb5ed9-05f5-4dfb-995c-a60c6e389a2b}</UniqueIdentifier>
+    <Filter Include="Problem_076_100">
+      <UniqueIdentifier>{4d8fb5a8-ab11-4aa1-bd48-daec28d0bd5a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Problem001to010\problems.h">
-      <Filter>Problem001to010</Filter>
-    </ClInclude>
-    <ClInclude Include="stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="utils.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Problem011to020\problems.h">
-      <Filter>Problem011to020</Filter>
-    </ClInclude>
-    <ClInclude Include="Problem061to070\problems.h">
-      <Filter>Problem061to070</Filter>
-    </ClInclude>
-    <ClInclude Include="Problem021to030\problems.h">
-      <Filter>Problem021to030</Filter>
-    </ClInclude>
-    <ClInclude Include="Problem031to040\problems.h">
-      <Filter>Problem031to040</Filter>
-    </ClInclude>
-    <ClInclude Include="Problem041to050\problems.h">
-      <Filter>Problem041to050</Filter>
-    </ClInclude>
-    <ClInclude Include="Problem051to060\problems.h">
-      <Filter>Problem051to060</Filter>
-    </ClInclude>
-    <ClInclude Include="Problem091to100\problems.h">
-      <Filter>Problem091to100</Filter>
-    </ClInclude>
+    <ClCompile Include="Problem_001_025\Problem001.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="utils.cpp" />
+    <ClCompile Include="Problem_001_025\Problem002.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem003.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem004.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem005.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem006.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem007.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem008.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem009.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem010.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem011.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem012.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem013.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem014.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem015.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem016.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem017.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem018.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem019.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem020.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem021.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem022.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem023.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem024.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_001_025\Problem025.cpp">
+      <Filter>Problem_001_025</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem026.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem027.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem028.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem029.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem030.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem031.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem032.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem033.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem034.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem035.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem036.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem037.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem038.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem039.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem040.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem041.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem042.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem043.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem044.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem045.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem046.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem047.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem048.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem049.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_026_050\Problem050.cpp">
+      <Filter>Problem_026_050</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem051.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem052.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem053.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem054.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem055.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem056.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem057.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem058.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem059.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem060.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem061.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem062.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem063.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_051_075\Problem067.cpp">
+      <Filter>Problem_051_075</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_076_100\Problem092.cpp">
+      <Filter>Problem_076_100</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_076_100\Problem097.cpp">
+      <Filter>Problem_076_100</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem001to010\problem1.cpp">
-      <Filter>Problem001to010</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem001to010\problem2.cpp">
-      <Filter>Problem001to010</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem001to010\problem3.cpp">
-      <Filter>Problem001to010</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem001to010\problem4.cpp">
-      <Filter>Problem001to010</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem001to010\problem5.cpp">
-      <Filter>Problem001to010</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem001to010\problem6.cpp">
-      <Filter>Problem001to010</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem001to010\problem7.cpp">
-      <Filter>Problem001to010</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem001to010\problem8.cpp">
-      <Filter>Problem001to010</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem001to010\problem9.cpp">
-      <Filter>Problem001to010</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem001to010\problem10.cpp">
-      <Filter>Problem001to010</Filter>
-    </ClCompile>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="utils.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem011to020\problem11.cpp">
-      <Filter>Problem011to020</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem011to020\problem12.cpp">
-      <Filter>Problem011to020</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem011to020\problem13.cpp">
-      <Filter>Problem011to020</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem011to020\problem14.cpp">
-      <Filter>Problem011to020</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem011to020\problem15.cpp">
-      <Filter>Problem011to020</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem011to020\problem16.cpp">
-      <Filter>Problem011to020</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem011to020\problem17.cpp">
-      <Filter>Problem011to020</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem011to020\problem19.cpp">
-      <Filter>Problem011to020</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem011to020\problem20.cpp">
-      <Filter>Problem011to020</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem011to020\problem18.cpp">
-      <Filter>Problem011to020</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem061to070\problem67.cpp">
-      <Filter>Problem061to070</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem021to030\problem21.cpp">
-      <Filter>Problem021to030</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem021to030\problem22.cpp">
-      <Filter>Problem021to030</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem021to030\problem24.cpp">
-      <Filter>Problem021to030</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem021to030\problem25.cpp">
-      <Filter>Problem021to030</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem021to030\problem26.cpp">
-      <Filter>Problem021to030</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem021to030\problem23.cpp">
-      <Filter>Problem021to030</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem021to030\problem27.cpp">
-      <Filter>Problem021to030</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem021to030\problem28.cpp">
-      <Filter>Problem021to030</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem021to030\problem29.cpp">
-      <Filter>Problem021to030</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem021to030\problem30.cpp">
-      <Filter>Problem021to030</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem031to040\problem31.cpp">
-      <Filter>Problem031to040</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem031to040\problem32.cpp">
-      <Filter>Problem031to040</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem031to040\problem33.cpp">
-      <Filter>Problem031to040</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem031to040\problem34.cpp">
-      <Filter>Problem031to040</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem031to040\problem35.cpp">
-      <Filter>Problem031to040</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem031to040\problem36.cpp">
-      <Filter>Problem031to040</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem031to040\problem40.cpp">
-      <Filter>Problem031to040</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem031to040\problem37.cpp">
-      <Filter>Problem031to040</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem031to040\problem38.cpp">
-      <Filter>Problem031to040</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem041to050\problem42.cpp">
-      <Filter>Problem041to050</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem041to050\problem45.cpp">
-      <Filter>Problem041to050</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem031to040\problem39.cpp">
-      <Filter>Problem031to040</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem041to050\problem41.cpp">
-      <Filter>Problem041to050</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem041to050\problem43.cpp">
-      <Filter>Problem041to050</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem041to050\problem44.cpp">
-      <Filter>Problem041to050</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem041to050\problem46.cpp">
-      <Filter>Problem041to050</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem041to050\problem47.cpp">
-      <Filter>Problem041to050</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem041to050\problem48.cpp">
-      <Filter>Problem041to050</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem041to050\problem49.cpp">
-      <Filter>Problem041to050</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem041to050\problem50.cpp">
-      <Filter>Problem041to050</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem051to060\problem51.cpp">
-      <Filter>Problem051to060</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem051to060\problem52.cpp">
-      <Filter>Problem051to060</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem051to060\problem59.cpp">
-      <Filter>Problem051to060</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem051to060\problem53.cpp">
-      <Filter>Problem051to060</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem051to060\problem54.cpp">
-      <Filter>Problem051to060</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem051to060\problem55.cpp">
-      <Filter>Problem051to060</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem051to060\problem56.cpp">
-      <Filter>Problem051to060</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem051to060\problem57.cpp">
-      <Filter>Problem051to060</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem051to060\problem58.cpp">
-      <Filter>Problem051to060</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem051to060\problem60.cpp">
-      <Filter>Problem051to060</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem061to070\problem61.cpp">
-      <Filter>Problem061to070</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem061to070\problem62.cpp">
-      <Filter>Problem061to070</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem061to070\problem63.cpp">
-      <Filter>Problem061to070</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem091to100\problem97.cpp">
-      <Filter>Problem091to100</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem091to100\problem92.cpp">
-      <Filter>Problem091to100</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem061to070\problem68.cpp">
-      <Filter>Problem061to070</Filter>
-    </ClCompile>
+    <ClInclude Include="utils.h" />
   </ItemGroup>
 </Project>
