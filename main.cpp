@@ -5,7 +5,7 @@
 #include <boost/preprocessor.hpp>
 #include "utils.h"
 
-#define PROBLEM_NO 70
+#define PROBLEM_NO 71
 #define RET_TYPE   int64_t
 
 #define PROBLEM_FUNC BOOST_PP_CAT(Problem, PROBLEM_NO)

@@ -2,8 +2,6 @@
 #include <algorithm>
 #include <vector>
 
-#include <iostream>
-
 using namespace std;
 
 int64_t Problem68()
