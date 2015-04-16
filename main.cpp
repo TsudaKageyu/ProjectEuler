@@ -5,6 +5,8 @@
 #include <boost/preprocessor.hpp>
 #include "utils.h"
 
+using namespace std;
+
 #define PROBLEM_NO 76
 #define RET_TYPE   int64_t
 
@@ -17,7 +19,7 @@ int main()
 {
     StopWatch sw;
 
-    std::vector<RET_TYPE> answers;
+    vector<RET_TYPE> answers;
     answers.reserve(TestCount);
 
     for (int32_t i = 0; i < TestCount; ++i)
@@ -28,10 +30,10 @@ int main()
     char buf[32] = {};
     ::sprintf_s(buf, "%f", sw.GetMillisecond() / TestCount);
 
-    std::cout << "Answer " << PROBLEM_NO << ": " << answers[0] << std::endl;
-    std::cout << std::endl;
-    std::cout << buf << " ms" << std::endl;
-    std::cout << sw.GetCpuCycle() / TestCount << " cycles" << std::endl;
+    cout << "Answer " << PROBLEM_NO << ": " << answers[0] << endl;
+    cout << endl;
+    cout << buf << " ms" << endl;
+    cout << sw.GetCpuCycle() / TestCount << " cycles" << endl;
 
     return 0;
 }
