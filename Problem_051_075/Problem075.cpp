@@ -18,9 +18,9 @@ namespace
     }
 }
 
-int64_t Problem39()
+int64_t Problem75()
 {
-    const int32_t Limit = 1000;
+    const int32_t Limit = 1500000;
     const int32_t MaxI  = static_cast<int32_t>(sqrt(Limit / 2.0 - 0.25) - 0.5);
 
     vector<int32_t> counts(Limit + 1);
@@ -41,5 +41,5 @@ int64_t Problem39()
         }
     }
 
-    return (max_element(counts.begin(), counts.end()) - counts.begin());
+    return count_if(counts.begin(), counts.end(), [](int32_t x) { return (x == 1); });
 }

@@ -86,6 +86,7 @@
     <ClCompile Include="Problem_051_075\Problem072.cpp" />
     <ClCompile Include="Problem_051_075\Problem073.cpp" />
     <ClCompile Include="Problem_051_075\Problem074.cpp" />
+    <ClCompile Include="Problem_051_075\Problem075.cpp" />
     <ClCompile Include="Problem_076_100\Problem079.cpp" />
     <ClCompile Include="Problem_076_100\Problem089.cpp" />
     <ClCompile Include="Problem_076_100\Problem092.cpp" />
