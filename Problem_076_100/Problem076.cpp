@@ -18,5 +18,5 @@ int64_t Problem76()
         }
     }
 
-    return 0;
+    return p.back();
 }
