@@ -7,13 +7,14 @@ using namespace std;
 int64_t Problem39()
 {
     const size_t Limit = 1000;
+    const double MaxI  = sqrt(Limit / 2.0 - 0.25) - 0.5;
 
     vector<int32_t> perimeters;
 
-    for (int32_t i = 1; i <= 30; ++i)
+    for (int32_t i = 1; i < MaxI; ++i)
     {
         for (int32_t j = 1 + (i & 1); j < i; j += 2)
-            perimeters.push_back((i * i - j * j) + (2 * i * j) + (i * i + j * j));
+            perimeters.push_back(2 * (i * i + i * j));
     }
 
     vector<int32_t> counts(Limit + 1);
